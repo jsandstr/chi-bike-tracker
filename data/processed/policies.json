@@ -1,0 +1,341 @@
+[
+  {
+    "id": "chicago-cycling-strategy",
+    "name": "Chicago Cycling Strategy",
+    "kind": "plan",
+    "jurisdiction": "City of Chicago",
+    "status": "active",
+    "start": "2023-03",
+    "end": null,
+    "summary": "CDOT's current bike plan, released in March 2023. It sets out the next 150 miles of bikeways and shifts the emphasis to a connected, low-stress network: 85% of the identified projects are protected bike lanes or neighborhood greenways. It is funded through the Chicago Works capital plan.\n",
+    "measure": true,
+    "targets": [
+      {
+        "label": "150 miles of new bikeways",
+        "metric": "any_miles_added",
+        "value": 150.0,
+        "reported": {
+          "value": 50.0,
+          "as_of": "2024-01",
+          "source": "https://blockclubchicago.org/2024/01/11/city-installed-50-miles-of-bike-friendly-stretches-in-2023-and-has-more-planned-for-2024/"
+        },
+        "note": "The city's count includes upgrades to existing lanes and off-street trails. The measured figure is net new street miles with any facility, so it runs lower.\n",
+        "measured": 104.95,
+        "progress": 0.7
+      },
+      {
+        "label": "70% of Chicagoans within half a mile of a low-stress bikeway",
+        "metric": "none",
+        "value": null,
+        "reported": null,
+        "note": null,
+        "measured": null,
+        "progress": null
+      }
+    ],
+    "sources": [
+      {
+        "title": "Chicago Cycling Strategy, executive summary (CDOT, 2023)",
+        "url": "https://www.chicago.gov/content/dam/city/sites/complete-streets/pdfs/2023_Chicago%20Cycling%20Strategy_Executive%20Summary.pdf"
+      },
+      {
+        "title": "CDOT releases vision for adding 150 miles of bike lanes across city (WBEZ)",
+        "url": "https://www.wbez.org/2023/03/30/cdot-releases-vision-for-adding-150-miles-of-bike-lanes-across-city"
+      },
+      {
+        "title": "Complete Streets 2024 highlights (CDOT)",
+        "url": "https://chicago.gov/city/en/sites/complete-streets-chicago/home/featured-projects-and-innovations/CompleteStreets2024Highlights.html"
+      }
+    ],
+    "contribution": {
+      "from": "2022-12",
+      "to": "2025-12",
+      "truncated": false,
+      "any_miles": 104.95,
+      "low_stress_miles": 91.12,
+      "any_pct_points": 2.66,
+      "by_facility": {
+        "Protected Bike Lane": 32.78,
+        "Neighborhood Greenway": 58.34,
+        "Buffered Bike Lane": -5.53,
+        "Bike Lane": 25.12,
+        "Marked Shared Lane": -5.76
+      }
+    }
+  },
+  {
+    "id": "smart-streets-pilot",
+    "name": "Smart Streets camera enforcement pilot",
+    "kind": "ordinance",
+    "jurisdiction": "City of Chicago",
+    "status": "active",
+    "start": "2023-03",
+    "end": "2026-12",
+    "summary": "A two-year pilot, authorised by City Council in March 2023, that uses cameras (including ones mounted on CTA buses) to ticket drivers who park in bike lanes and bus lanes downtown, in the area from Lake Michigan to Ashland Avenue and North Avenue to Roosevelt Road. The pilot is set to expire in December 2026.\n",
+    "measure": false,
+    "targets": [],
+    "sources": [
+      {
+        "title": "Chicago drivers caught on camera blocking bike lanes will soon get tickets in the mail (Block Club Chicago)",
+        "url": "https://blockclubchicago.org/2023/03/15/chicago-drivers-caught-on-camera-blocking-bike-lanes-will-soon-get-tickets-in-the-mail/"
+      },
+      {
+        "title": "Chicago begins automated ticketing of drivers who block bike and bus lanes downtown (CBS Chicago)",
+        "url": "https://www.cbsnews.com/amp/chicago/news/chicago-bike-bus-lane-ticketing-downtown-smart-streets-program"
+      }
+    ],
+    "contribution": null
+  },
+  {
+    "id": "vision-zero-chicago",
+    "name": "Vision Zero Chicago Action Plan",
+    "kind": "plan",
+    "jurisdiction": "City of Chicago",
+    "status": "active",
+    "start": "2017-06",
+    "end": "2026-12",
+    "summary": "Released in June 2017, the plan commits the city to eliminating deaths and serious injuries from traffic crashes by 2026, with interim goals of 20% fewer deaths and 35% fewer serious injuries by 2020. It is a safety plan rather than a bikeway plan, so no coverage contribution is calculated.\n",
+    "measure": false,
+    "targets": [
+      {
+        "label": "Zero traffic deaths and serious injuries by 2026",
+        "metric": "none",
+        "value": null,
+        "reported": null,
+        "note": null,
+        "measured": null,
+        "progress": null
+      }
+    ],
+    "sources": [
+      {
+        "title": "Vision Zero Chicago Action Plan (City of Chicago, 2017)",
+        "url": "https://chicago.gov/content/dam/city/sites/complete-streets/pdfs/17_0612%20VZ%20Action%20Plan_FOR%20WEB.pdf"
+      },
+      {
+        "title": "Mayor's press release, June 12, 2017",
+        "url": "https://chicago.gov/city/en/depts/mayor/press_room/press_releases/2017/june/VisionZero.html"
+      }
+    ],
+    "contribution": null
+  },
+  {
+    "id": "25-mph-speed-limit",
+    "name": "25 mph default speed limit",
+    "kind": "ordinance",
+    "jurisdiction": "City of Chicago",
+    "status": "failed",
+    "start": "2024-10",
+    "end": "2025-02",
+    "summary": "A proposal to lower Chicago's default speed limit from 30 to 25 mph. It passed the Committee on Pedestrian and Traffic Safety in October 2024, but the full City Council rejected it 21-28 on February 19, 2025, with opponents citing the burden of fines on Black, Latino and low-income residents.\n",
+    "measure": false,
+    "targets": [],
+    "sources": [
+      {
+        "title": "City Council votes 21-28 to reject push to lower Chicago's default speed limit to 25 mph (WTTW)",
+        "url": "https://news.wttw.com/2025/02/19/city-council-votes-21-28-reject-push-lower-chicago-s-default-speed-limit-25-mph"
+      },
+      {
+        "title": "25 mph speed limit passes in committee (Streetsblog Chicago)",
+        "url": "https://chi.streetsblog.org/2024/10/21/five-nickels-on-the-dime-25-mph-speed-limit-for-safer-streets-passes-in-committee-will-get-final-council-vote-later-this-year"
+      }
+    ],
+    "contribution": null
+  },
+  {
+    "id": "chicago-works-100-miles",
+    "name": "Chicago Works 100-mile bikeway expansion",
+    "kind": "program",
+    "jurisdiction": "City of Chicago",
+    "status": "completed",
+    "start": "2021-01",
+    "end": "2022-12",
+    "summary": "Announced in September 2021 as the largest two-year expansion of the bike network in the city's history: $17 million from the Chicago Works capital plan for 100 miles of new and upgraded bike lanes, 50 miles in 2021 and 50 in 2022.\n",
+    "measure": true,
+    "targets": [
+      {
+        "label": "100 miles of new and upgraded bike lanes",
+        "metric": "any_miles_added",
+        "value": 100.0,
+        "reported": null,
+        "note": "Upgrading an existing lane (for example painted to protected) counted toward the city's 100 miles but adds no new street miles here.\n",
+        "measured": 62.94,
+        "progress": 0.629
+      }
+    ],
+    "sources": [
+      {
+        "title": "Chicago DOT announces largest bike-lane expansion in city's history (Roads & Bridges)",
+        "url": "https://www.roadsbridges.com/transportation-management/news/10654329/chicago-dot-announces-largest-bike-lane-expansion-in-citys-history"
+      },
+      {
+        "title": "CDOT announces major bikeway push (Streetsblog Chicago)",
+        "url": "https://chi.streetsblog.org/2021/09/22/cdot-announces-major-bikeway-push-still-no-plans-for-a-cohesive-protected-network/"
+      }
+    ],
+    "contribution": {
+      "from": "2021-01",
+      "to": "2022-12",
+      "truncated": false,
+      "any_miles": 62.94,
+      "low_stress_miles": 22.65,
+      "any_pct_points": 1.6,
+      "by_facility": {
+        "Protected Bike Lane": 10.7,
+        "Neighborhood Greenway": 11.96,
+        "Buffered Bike Lane": 6.13,
+        "Bike Lane": 26.01,
+        "Marked Shared Lane": 8.14
+      }
+    }
+  },
+  {
+    "id": "streets-for-cycling-2020",
+    "name": "Chicago Streets for Cycling Plan 2020",
+    "kind": "plan",
+    "jurisdiction": "City of Chicago",
+    "status": "expired",
+    "start": "2012-12",
+    "end": "2020-12",
+    "summary": "Published in December 2012 under Mayor Emanuel, the plan identified a 645-mile network of on-street bikeways to be in place by 2020. The network was not completed by the plan's horizon.\n",
+    "measure": true,
+    "targets": [
+      {
+        "label": "645-mile on-street bikeway network by 2020",
+        "metric": "any_miles_total",
+        "value": 645.0,
+        "reported": null,
+        "note": null,
+        "measured": 275.39,
+        "progress": 0.427
+      }
+    ],
+    "sources": [
+      {
+        "title": "Chicago Streets for Cycling Plan 2020 (CDOT)",
+        "url": "https://www.chicago.gov/content/dam/city/depts/cdot/bike/general/ChicagoStreetsforCycling2020.pdf"
+      },
+      {
+        "title": "Active Transportation Alliance renews call for a protected bike lane network (Streetsblog Chicago)",
+        "url": "https://chi.streetsblog.org/2021/06/01/active-transportation-alliances-renews-call-for-a-protected-bike-lane-network"
+      }
+    ],
+    "contribution": {
+      "from": "2014-12",
+      "to": "2021-01",
+      "truncated": true,
+      "any_miles": 97.22,
+      "low_stress_miles": 34.26,
+      "any_pct_points": 2.46,
+      "by_facility": {
+        "Protected Bike Lane": 20.32,
+        "Neighborhood Greenway": 13.93,
+        "Buffered Bike Lane": 104.04,
+        "Bike Lane": -45.75,
+        "Marked Shared Lane": 4.67
+      }
+    }
+  },
+  {
+    "id": "emanuel-100-miles-protected",
+    "name": "100 miles of protected bike lanes",
+    "kind": "pledge",
+    "jurisdiction": "City of Chicago",
+    "status": "completed",
+    "start": "2011-05",
+    "end": "2015-10",
+    "summary": "Mayor Emanuel's 2011 transition plan promised 100 miles of physically separated bike lanes in his first term. In October 2015 the city announced it had reached 103 miles, but by then it was counting buffered lanes (\"buffer-protected\") toward the goal; only about 20 of those miles had a physical barrier.\n",
+    "measure": true,
+    "targets": [
+      {
+        "label": "100 miles of protected bike lanes",
+        "metric": "protected_miles_total",
+        "value": 100.0,
+        "reported": {
+          "value": 103.0,
+          "as_of": "2015-10",
+          "source": "https://chicago.gov/city/en/depts/mayor/press_room/press_releases/2015/september/city-of-chicago-surpasses-mayor-emanuels-goal-of-installing-100-.html"
+        },
+        "note": "The city's 103 miles includes buffered bike lanes. The measured figure counts only lanes the city's data labels as protected.\n",
+        "measured": 18.58,
+        "progress": 0.186
+      }
+    ],
+    "sources": [
+      {
+        "title": "City of Chicago surpasses Mayor Emanuel's goal of installing 100 miles of protected bike lanes (City of Chicago)",
+        "url": "https://chicago.gov/city/en/depts/mayor/press_room/press_releases/2015/september/city-of-chicago-surpasses-mayor-emanuels-goal-of-installing-100-.html"
+      },
+      {
+        "title": "CDOT didn't hit 100-mile PBL goal, but they did transform the bike network (Streetsblog Chicago)",
+        "url": "https://chi.streetsblog.org/2015/10/09/cdot-didnt-hit-100-mile-pbl-goal-but-they-did-transform-the-bike-network"
+      }
+    ],
+    "contribution": {
+      "from": "2014-12",
+      "to": "2016-03",
+      "truncated": true,
+      "any_miles": 44.38,
+      "low_stress_miles": 16.27,
+      "any_pct_points": 1.13,
+      "by_facility": {
+        "Protected Bike Lane": 14.97,
+        "Neighborhood Greenway": 1.3,
+        "Buffered Bike Lane": 60.65,
+        "Bike Lane": -35.63,
+        "Marked Shared Lane": 3.08
+      }
+    }
+  },
+  {
+    "id": "bike-2015-plan",
+    "name": "Bike 2015 Plan",
+    "kind": "plan",
+    "jurisdiction": "City of Chicago",
+    "status": "expired",
+    "start": "2006-06",
+    "end": "2015-12",
+    "summary": "Adopted in 2006 under Mayor Daley. It proposed a 500-mile bikeway network with a bikeway within half a mile of every resident, and set two headline goals: 5% of all trips under five miles made by bike, and bicycle injuries cut in half. Most of its period predates the city's archived bike route data, so no coverage contribution is calculated.\n",
+    "measure": false,
+    "targets": [
+      {
+        "label": "500-mile bikeway network",
+        "metric": "none",
+        "value": null,
+        "reported": null,
+        "note": null,
+        "measured": null,
+        "progress": null
+      },
+      {
+        "label": "5% of trips under five miles by bicycle",
+        "metric": "none",
+        "value": null,
+        "reported": null,
+        "note": null,
+        "measured": null,
+        "progress": null
+      },
+      {
+        "label": "Bicycle injuries reduced by 50%",
+        "metric": "none",
+        "value": null,
+        "reported": null,
+        "note": null,
+        "measured": null,
+        "progress": null
+      }
+    ],
+    "sources": [
+      {
+        "title": "Cycling in Chicago (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Cycling_in_Chicago"
+      },
+      {
+        "title": "Chicago peddles 500-mile bike path proposal (Planetizen)",
+        "url": "https://www.planetizen.com/node/20090"
+      }
+    ],
+    "contribution": null
+  }
+]

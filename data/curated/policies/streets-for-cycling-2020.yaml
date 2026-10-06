@@ -1,0 +1,21 @@
+id: streets-for-cycling-2020
+name: Chicago Streets for Cycling Plan 2020
+kind: plan
+jurisdiction: City of Chicago
+status: expired
+start: "2012-12"
+end: "2020-12"
+summary: >
+  Published in December 2012 under Mayor Emanuel, the plan identified a
+  645-mile network of on-street bikeways to be in place by 2020. The network
+  was not completed by the plan's horizon.
+measure: true
+targets:
+  - label: 645-mile on-street bikeway network by 2020
+    metric: any_miles_total
+    value: 645
+sources:
+  - title: Chicago Streets for Cycling Plan 2020 (CDOT)
+    url: https://www.chicago.gov/content/dam/city/depts/cdot/bike/general/ChicagoStreetsforCycling2020.pdf
+  - title: Active Transportation Alliance renews call for a protected bike lane network (Streetsblog Chicago)
+    url: https://chi.streetsblog.org/2021/06/01/active-transportation-alliances-renews-call-for-a-protected-bike-lane-network

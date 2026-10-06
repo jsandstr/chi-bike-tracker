@@ -1,0 +1,29 @@
+id: bike-2015-plan
+name: Bike 2015 Plan
+kind: plan
+jurisdiction: City of Chicago
+status: expired
+start: "2006-06"
+end: "2015-12"
+summary: >
+  Adopted in 2006 under Mayor Daley. It proposed a 500-mile bikeway network
+  with a bikeway within half a mile of every resident, and set two headline
+  goals: 5% of all trips under five miles made by bike, and bicycle injuries
+  cut in half. Most of its period predates the city's archived bike route
+  data, so no coverage contribution is calculated.
+measure: false
+targets:
+  - label: 500-mile bikeway network
+    metric: none
+    value: null
+  - label: 5% of trips under five miles by bicycle
+    metric: none
+    value: null
+  - label: Bicycle injuries reduced by 50%
+    metric: none
+    value: null
+sources:
+  - title: Cycling in Chicago (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Cycling_in_Chicago
+  - title: Chicago peddles 500-mile bike path proposal (Planetizen)
+    url: https://www.planetizen.com/node/20090

@@ -1,0 +1,163 @@
+{
+  "generated": "2026-10-06",
+  "street_miles": 3948.83,
+  "snapshots": [
+    {
+      "key": "s0",
+      "date": "2014-12",
+      "source": "qbbe-eqz7",
+      "any_miles": 178.17,
+      "low_stress_miles": 3.61,
+      "any_pct": 4.51,
+      "low_stress_pct": 0.09,
+      "by_facility": {
+        "Protected Bike Lane": 3.61,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 2.58,
+        "Bike Lane": 132.63,
+        "Marked Shared Lane": 39.36
+      },
+      "miles_per_year": null
+    },
+    {
+      "key": "s1",
+      "date": "2016-03",
+      "source": "d6m3-6qzf+s5am-iwmv",
+      "any_miles": 222.55,
+      "low_stress_miles": 19.88,
+      "any_pct": 5.64,
+      "low_stress_pct": 0.5,
+      "by_facility": {
+        "Protected Bike Lane": 18.58,
+        "Neighborhood Greenway": 1.3,
+        "Buffered Bike Lane": 63.23,
+        "Bike Lane": 97.0,
+        "Marked Shared Lane": 42.44
+      },
+      "miles_per_year": {
+        "any": 35.5,
+        "low_stress": 13.02
+      }
+    },
+    {
+      "key": "s2",
+      "date": "2018-11",
+      "source": "s72g-kd5k",
+      "any_miles": 233.58,
+      "low_stress_miles": 22.48,
+      "any_pct": 5.92,
+      "low_stress_pct": 0.57,
+      "by_facility": {
+        "Protected Bike Lane": 21.18,
+        "Neighborhood Greenway": 1.3,
+        "Buffered Bike Lane": 84.47,
+        "Bike Lane": 83.11,
+        "Marked Shared Lane": 43.52
+      },
+      "miles_per_year": {
+        "any": 4.14,
+        "low_stress": 0.98
+      }
+    },
+    {
+      "key": "s3",
+      "date": "2020-02",
+      "source": "auur-f9g5",
+      "any_miles": 269.48,
+      "low_stress_miles": 24.07,
+      "any_pct": 6.82,
+      "low_stress_pct": 0.61,
+      "by_facility": {
+        "Protected Bike Lane": 22.01,
+        "Neighborhood Greenway": 2.06,
+        "Buffered Bike Lane": 108.83,
+        "Bike Lane": 83.4,
+        "Marked Shared Lane": 53.18
+      },
+      "miles_per_year": {
+        "any": 28.72,
+        "low_stress": 1.27
+      }
+    },
+    {
+      "key": "s4",
+      "date": "2021-01",
+      "source": "ard8-rcb7",
+      "any_miles": 275.39,
+      "low_stress_miles": 37.87,
+      "any_pct": 6.97,
+      "low_stress_pct": 0.96,
+      "by_facility": {
+        "Protected Bike Lane": 23.93,
+        "Neighborhood Greenway": 13.93,
+        "Buffered Bike Lane": 106.62,
+        "Bike Lane": 86.88,
+        "Marked Shared Lane": 44.03
+      },
+      "miles_per_year": {
+        "any": 6.45,
+        "low_stress": 15.05
+      }
+    },
+    {
+      "key": "s5",
+      "date": "2021-11",
+      "source": "8ec2-eaj2",
+      "any_miles": 300.55,
+      "low_stress_miles": 43.59,
+      "any_pct": 7.61,
+      "low_stress_pct": 1.1,
+      "by_facility": {
+        "Protected Bike Lane": 26.32,
+        "Neighborhood Greenway": 17.27,
+        "Buffered Bike Lane": 110.95,
+        "Bike Lane": 98.95,
+        "Marked Shared Lane": 47.08
+      },
+      "miles_per_year": {
+        "any": 30.19,
+        "low_stress": 6.86
+      }
+    },
+    {
+      "key": "s6",
+      "date": "2022-12",
+      "source": "9saw-v2cz",
+      "any_miles": 338.33,
+      "low_stress_miles": 60.52,
+      "any_pct": 8.57,
+      "low_stress_pct": 1.53,
+      "by_facility": {
+        "Protected Bike Lane": 34.63,
+        "Neighborhood Greenway": 25.89,
+        "Buffered Bike Lane": 112.75,
+        "Bike Lane": 112.89,
+        "Marked Shared Lane": 52.17
+      },
+      "miles_per_year": {
+        "any": 34.87,
+        "low_stress": 15.63
+      }
+    },
+    {
+      "key": "s7",
+      "date": "2025-12",
+      "source": "hvv9-38ut",
+      "any_miles": 443.28,
+      "low_stress_miles": 151.64,
+      "any_pct": 11.23,
+      "low_stress_pct": 3.84,
+      "by_facility": {
+        "Protected Bike Lane": 67.41,
+        "Neighborhood Greenway": 84.23,
+        "Buffered Bike Lane": 107.22,
+        "Bike Lane": 138.01,
+        "Marked Shared Lane": 46.41
+      },
+      "miles_per_year": {
+        "any": 34.98,
+        "low_stress": 30.37
+      }
+    }
+  ]
+}

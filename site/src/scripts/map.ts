@@ -1,11 +1,9 @@
-import * as maplibregl from "maplibre-gl";
 import type { ExpressionSpecification, GeoJSONSource } from "maplibre-gl";
-import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
-import { Protocol } from "pmtiles";
 import type { Feature, FeatureCollection, Position } from "geojson";
 import wardsUrl from "../../../data/processed/wards.geojson?url";
 import communityAreasUrl from "../../../data/processed/community_areas.geojson?url";
-import { BREAKS, FACILITIES, RAMP, type Measure } from "../facilities";
+import { BREAKS, FACILITIES, RAMP, facilityStops, type Measure } from "../facilities";
+import { createMap, maplibregl, tileUrl } from "./basemap";
 
 type Kind = "wards" | "community_areas";
 type View = "streets" | "areas";
@@ -13,11 +11,9 @@ type AreaProps = { id: string; name: string; any_pct: number; low_stress_pct: nu
 type Areas = FeatureCollection<GeoJSON.Geometry, AreaProps>;
 
 const NO_FACILITY = "#cbd2db";
-const MUTED_FACILITY = "#9aa4b2";
 const INK = "#14213a";
 const SELECTED = "#2563eb";
 const AREA_BORDER = "#d98a3d";
-const CHICAGO: [number, number, number, number] = [-87.94, 41.644, -87.524, 42.023];
 
 const state = { measure: "any" as Measure, kind: "wards" as Kind, view: "streets" as View };
 let selected: string | null = null;
@@ -26,19 +22,7 @@ const titleCase = (s: string) => s.toLowerCase().replace(/\b[a-z]/g, (c) => c.to
 const areaName = (p: AreaProps) => (state.kind === "wards" ? `Ward ${p.name}` : titleCase(p.name));
 const pct = (n: number) => `${n.toFixed(1)}%`;
 
-// The library cannot find its own worker once Vite has bundled it.
-maplibregl.setWorkerUrl(workerUrl);
-maplibregl.addProtocol("pmtiles", new Protocol().tile);
-
-const map = new maplibregl.Map({
-  container: "map",
-  style: "https://tiles.openfreemap.org/styles/positron",
-  bounds: CHICAGO,
-  fitBoundsOptions: { padding: 24 },
-  minZoom: 8,
-  maxBounds: [-88.6, 41.2, -86.9, 42.5],
-  attributionControl: { compact: true },
-});
+const map = createMap("map");
 map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
 
 const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 10 });
@@ -50,11 +34,7 @@ const areas: Record<Kind, Promise<Areas>> = {
 
 function bikewayColor(): ExpressionSpecification {
   if (state.view === "areas") return ["literal", INK] as unknown as ExpressionSpecification;
-  const stops = FACILITIES.flatMap((f) => [
-    f.name,
-    state.measure === "low_stress" && !f.lowStress ? MUTED_FACILITY : f.color,
-  ]);
-  return ["match", ["get", "facility"], ...stops, NO_FACILITY] as unknown as ExpressionSpecification;
+  return ["match", ["get", "facility"], ...facilityStops(state.measure), NO_FACILITY] as unknown as ExpressionSpecification;
 }
 
 function width(z10: number, z16: number): ExpressionSpecification {
@@ -168,10 +148,9 @@ for (const name of ["measure", "view", "kind"] as const) {
 }
 
 map.on("load", async () => {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   map.addSource("streets", {
     type: "vector",
-    url: `pmtiles://${location.origin}${base}/tiles/streets.pmtiles`,
+    url: tileUrl("streets.pmtiles"),
     attribution: '<a href="https://data.cityofchicago.org">City of Chicago</a>',
   });
   map.addSource("areas", { type: "geojson", data: await areas[state.kind], promoteId: "id" });

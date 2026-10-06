@@ -1,0 +1,385 @@
+---
+import Base from "../layouts/Base.astro";
+import Masthead from "../components/Masthead.astro";
+import { FACILITIES } from "../facilities";
+import {
+  KIND_LABEL,
+  STATUS_LABEL,
+  STREET_MILES,
+  policies,
+  snapshots,
+  type Policy,
+  type Target,
+} from "../data";
+import { fmt, monthIndex, monthLabel, signed, timeScale } from "../format";
+import "../styles/policies.css";
+
+const first = snapshots[0];
+const final = snapshots[snapshots.length - 1];
+const x = timeScale(first.date, final.date);
+const lowColor = FACILITIES[0].color;
+
+// Both measures are drawn and CSS shows one, so the chart needs no client-side layout.
+const VELOCITY_MAX = 40;
+const TOTAL_MAX = 450;
+const velocityTicks = [0, 10, 20, 30, 40];
+const totalTicks = [0, 150, 300, 450];
+const yearTicks = [2016, 2018, 2020, 2022, 2024];
+const measures = [
+  { cls: "m-any", rate: (s: (typeof snapshots)[number]) => s.miles_per_year?.any, total: (s: (typeof snapshots)[number]) => s.any_miles },
+  { cls: "m-low", rate: (s: (typeof snapshots)[number]) => s.miles_per_year?.low_stress, total: (s: (typeof snapshots)[number]) => s.low_stress_miles },
+];
+const rateLabel = (n: number) => fmt(n, n < 10 ? 1 : 0);
+
+const current = policies.filter((p) => p.status === "active");
+const past = policies.filter((p) => p.status !== "active");
+const measured = policies
+  .filter((p) => p.contribution)
+  .sort((a, b) => b.contribution!.to.localeCompare(a.contribution!.to) || b.contribution!.from.localeCompare(a.contribution!.from));
+
+const dateRange = (p: Policy) => `${monthLabel(p.start)} to ${p.end ? monthLabel(p.end) : "ongoing"}`;
+const windowOf = (p: Policy) => `${monthLabel(p.contribution!.from)} to ${monthLabel(p.contribution!.to)}`;
+const meterLabel: Record<Exclude<Target["metric"], "none">, string> = {
+  any_miles_added: "miles added, any facility",
+  any_miles_total: "miles in place, any facility",
+  protected_miles_total: "miles in place, protected lane",
+};
+const measuredWhen = (p: Policy, t: Target) =>
+  !p.contribution
+    ? ""
+    : t.metric === "any_miles_added"
+      ? `Measured over ${windowOf(p)}.`
+      : `Measured as of ${monthLabel(p.contribution.to)}.`;
+
+// Common scales across all policies so bars can be compared.
+const MILES_MAX = 110;
+const byFacility = measured.flatMap((p) => Object.values(p.contribution!.by_facility));
+const DIFF_LO = Math.floor(Math.min(0, ...byFacility) / 10) * 10;
+const diffPos = (v: number) => (100 * (v - DIFF_LO)) / (MILES_MAX - DIFF_LO);
+const gain = final.any_miles - first.any_miles;
+---
+
+<Base
+  title="Bike policies and progress in Chicago"
+  description={`Chicago's bike network grew from ${fmt(first.any_miles)} to ${fmt(final.any_miles)} miles since December 2014. Which plans were in force, what they promised and how much they added.`}
+>
+  <div class="page" style={`--low:${lowColor}`}>
+    <Masthead current="policies" />
+
+    <p class="lede">
+      Chicago has {fmt(final.any_miles)} miles of streets with a bike facility, up from {fmt(first.any_miles)} in December 2014.
+      That is {fmt(final.any_pct, 1)}% of the city's {fmt(STREET_MILES)} street miles, up from {fmt(first.any_pct, 1)}%.
+      Below: how the network grew, what each bike plan promised, and how much was built while it was in force.
+    </p>
+
+    <section id="timelapse" data-measure="any" aria-labelledby="h-grew">
+      <h2 id="h-grew">How the network grew</h2>
+      <p class="sec-lede">
+        Eight archived copies of the city's bike route data, drawn on the same street grid. The copies are
+        unevenly spaced in time, so the charts are too: there is no data between two copies.
+      </p>
+
+      <fieldset class="segmented tl-measure" id="tl-measure">
+        <legend>Count</legend>
+        <label><input type="radio" name="tl-measure" value="any" checked /><span>Any bike facility</span></label>
+        <label><input type="radio" name="tl-measure" value="low_stress" /><span>Protected and greenways</span></label>
+      </fieldset>
+
+      <div class="tl-grid">
+        <div class="tl-readout" id="tl-readout" aria-live="polite">
+          <p class="tl-date" id="tl-date">{monthLabel(final.date)}</p>
+          <p class="tl-fig"><strong id="tl-miles">{fmt(final.any_miles, 1)}</strong> <span id="tl-miles-kind">miles with a bike facility</span></p>
+          <p class="tl-fig"><strong id="tl-pct">{fmt(final.any_pct, 1)}%</strong> <span>of street miles</span></p>
+          <p class="tl-velocity" id="tl-velocity"></p>
+          <p class="tl-velocity" id="tl-nomap" hidden>The map could not start in this browser (WebGL is needed). The chart still works.</p>
+          <div class="tl-controls">
+            <button type="button" id="tl-play" aria-pressed="false">Play</button>
+            <button type="button" id="tl-prev" aria-label="Previous snapshot">Back</button>
+            <button type="button" id="tl-next" aria-label="Next snapshot">Next</button>
+          </div>
+        </div>
+
+        <div class="tl-map" id="tl-map" role="application" aria-label="Map of Chicago bike facilities at the selected snapshot"></div>
+
+        <ul class="legend tl-legend" aria-label="Facility types">
+          {FACILITIES.map((f) => (
+            <li class:list={{ "not-low": !f.lowStress }}><i class="swatch" style={`background:${f.color}`} />{f.label}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="chart" id="tl-chart">
+        <h3 class="chart-title">
+          Miles added per year
+          <span class="m-any">with any facility</span><span class="m-low">of protected lane or greenway</span>
+        </h3>
+        <p class="chart-sub">Each bar spans the time between two archived copies. Taller means faster.</p>
+        <div class="plot plot-velocity">
+          {velocityTicks.map((t) => (
+            <span class="grid" style={`bottom:${(100 * t) / VELOCITY_MAX}%`}><b>{t}</b></span>
+          ))}
+          {snapshots.slice(1).map((s, k) => {
+            const i = k + 1;
+            const left = x(snapshots[i - 1].date);
+            return (
+              <button
+                type="button"
+                class="bar"
+                data-i={i}
+                style={`left:${left}%;width:${x(s.date) - left}%`}
+                aria-label={`${monthLabel(snapshots[i - 1].date)} to ${monthLabel(s.date)}: ${fmt(s.miles_per_year!.any, 1)} miles a year of any facility, ${fmt(s.miles_per_year!.low_stress, 1)} protected or greenway. Show ${monthLabel(s.date)}.`}
+              >
+                {measures.map((m) => (
+                  <span class={`fill ${m.cls}`} style={`height:${(100 * m.rate(s)!) / VELOCITY_MAX}%`}>
+                    <b>{rateLabel(m.rate(s)!)}</b>
+                  </span>
+                ))}
+              </button>
+            );
+          })}
+          <span class="cursor" aria-hidden="true"></span>
+        </div>
+
+        <h3 class="chart-title">
+          Total miles
+          <span class="m-any">with any facility</span><span class="m-low">of protected lane or greenway</span>
+        </h3>
+        <div class="plot plot-total">
+          {totalTicks.map((t) => (
+            <span class="grid" style={`bottom:${(100 * t) / TOTAL_MAX}%`}><b>{t}</b></span>
+          ))}
+          {measures.map((m) => (
+            <svg class={`line ${m.cls}`} viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <polyline points={snapshots.map((s) => `${x(s.date)},${100 - (100 * m.total(s)) / TOTAL_MAX}`).join(" ")} />
+            </svg>
+          ))}
+          {measures.map((m) =>
+            snapshots.map((s, i) => (
+              <button
+                type="button"
+                class={`dot ${m.cls}`}
+                data-i={i}
+                style={`left:${x(s.date)}%;bottom:${(100 * m.total(s)) / TOTAL_MAX}%`}
+                aria-label={`${monthLabel(s.date)}: ${fmt(m.total(s), 1)} miles. Show this snapshot.`}
+              />
+            )),
+          )}
+          <span class="cursor" aria-hidden="true"></span>
+        </div>
+
+        <div class="axis" aria-hidden="true">
+          {yearTicks.map((y) => <span style={`left:${x(`${y}-01`)}%`}>{y}</span>)}
+        </div>
+
+        <div class="scrub">
+          <div class="scrub-track">
+            {snapshots.map((s) => <i style={`left:${x(s.date)}%`} />)}
+          </div>
+          <label class="visually-hidden" for="tl-slider">Snapshot date</label>
+          <input
+            id="tl-slider"
+            type="range"
+            min={monthIndex(first.date)}
+            max={monthIndex(final.date)}
+            step="1"
+            value={monthIndex(final.date)}
+          />
+        </div>
+        <p class="chart-note">Dots and ticks mark the eight archived copies, December 2014 to December 2025, placed by date.</p>
+
+        <table class="visually-hidden">
+          <caption>Bike network by archived copy</caption>
+          <thead>
+            <tr>
+              <th scope="col">Copy</th>
+              <th scope="col">Miles, any facility</th>
+              <th scope="col">Miles, protected or greenway</th>
+              <th scope="col">Share of street miles, any</th>
+              <th scope="col">Share, protected or greenway</th>
+              <th scope="col">Added per year, any</th>
+              <th scope="col">Added per year, protected or greenway</th>
+            </tr>
+          </thead>
+          <tbody>
+            {snapshots.map((s) => (
+              <tr>
+                <th scope="row">{monthLabel(s.date)}</th>
+                <td>{fmt(s.any_miles, 1)}</td>
+                <td>{fmt(s.low_stress_miles, 1)}</td>
+                <td>{fmt(s.any_pct, 1)}%</td>
+                <td>{fmt(s.low_stress_pct, 1)}%</td>
+                <td>{s.miles_per_year ? fmt(s.miles_per_year.any, 1) : "none, first copy"}</td>
+                <td>{s.miles_per_year ? fmt(s.miles_per_year.low_stress, 1) : "none, first copy"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {[
+      { id: "current", title: "Current policies", list: current, empty: "No active policies." },
+      { id: "past", title: "Past policies", list: past, empty: "No past policies." },
+    ].map((group) => (
+      <section id={group.id} aria-labelledby={`h-${group.id}`}>
+        <h2 id={`h-${group.id}`}>{group.title}</h2>
+        {group.list.length === 0 && <p>{group.empty}</p>}
+        {group.list.map((p) => (
+          <article class="policy" id={`policy-${p.id}`}>
+            <header class="policy-head">
+              <h3>{p.name}</h3>
+              <p class={`status status-${p.status}`}><span class="visually-hidden">Status: </span>{STATUS_LABEL[p.status]}</p>
+              <dl class="meta">
+                <div><dt>Type</dt><dd>{KIND_LABEL[p.kind]}, {p.jurisdiction}</dd></div>
+                <div><dt>Dates</dt><dd>{dateRange(p)}</dd></div>
+              </dl>
+            </header>
+            <div class="policy-body">
+              <p class="summary">{p.summary.trim()}</p>
+
+              {p.targets.length > 0 && (
+                <ul class="targets">
+                  {p.targets.map((t) => (
+                    <li class="target">
+                      <p class="target-label">{t.label}</p>
+                      {t.metric === "none" || t.measured == null || t.value == null ? (
+                        <p class="target-none">Stated goal. This site does not measure it.</p>
+                      ) : (
+                        <>
+                          <div class="meter" aria-hidden="true">
+                            <span style={`width:${Math.min(1, t.progress ?? 0) * 100}%`} />
+                          </div>
+                          <p class="meter-text">
+                            <strong>{fmt(t.measured, t.measured < 100 ? 1 : 0)}</strong> of {fmt(t.value)} {meterLabel[t.metric]}{" "}
+                            ({fmt(100 * (t.progress ?? 0))}%). <span class="muted">{measuredWhen(p, t)}</span>
+                          </p>
+                        </>
+                      )}
+                      {t.reported && (
+                        <p class="reported">
+                          <strong>Reported by the city or press:</strong> {fmt(t.reported.value)} miles as of {monthLabel(t.reported.as_of)}{" "}
+                          (<a href={t.reported.source}>source</a>). Not this site's measurement.
+                        </p>
+                      )}
+                      {t.note && <p class="target-note">{t.note.trim()}</p>}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <p class="contrib-line">
+                {p.contribution ? (
+                  <>
+                    Network change {windowOf(p)}: {signed(p.contribution.any_miles, 1)} miles of any facility,
+                    {" "}{signed(p.contribution.any_pct_points, 1)} points of citywide coverage.
+                    {" "}<a href="#contribution">Compare policies</a>.
+                  </>
+                ) : (
+                  <>No coverage contribution is calculated for this policy.</>
+                )}
+              </p>
+
+              <ul class="sources-list">
+                {p.sources.map((s) => <li><a href={s.url}>{s.title}</a></li>)}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </section>
+    ))}
+
+    <section id="contribution" aria-labelledby="h-contrib">
+      <h2 id="h-contrib">Coverage each policy contributed</h2>
+      <p class="sec-lede">
+        Street miles added between the two archived copies that bracket each policy. Windows overlap, so the bars
+        cannot be added together.
+      </p>
+      <ul class="legend contrib-legend" aria-label="Bar colours">
+        <li><i class="swatch" style={`background:var(--bar)`} />Any facility</li>
+        <li><i class="swatch" style={`background:var(--low)`} />Protected lane or greenway</li>
+      </ul>
+      <ol class="contrib">
+        {measured.map((p) => {
+          const c = p.contribution!;
+          return (
+            <li>
+              <h3><a href={`#policy-${p.id}`}>{p.name}</a></h3>
+              <p class="win">
+                {windowOf(p)}. Citywide coverage {signed(c.any_pct_points, 1)} percentage points.
+              </p>
+              {c.truncated && (
+                <p class="partial">
+                  <strong>Partial window.</strong> The city's archived data starts in December 2014, so only the part
+                  of this policy from then on is counted.
+                </p>
+              )}
+              <div class="crow">
+                <p><span>Any facility</span><b>{fmt(c.any_miles, 1)} mi</b></p>
+                <div class="track"><span class="fill any" style={`width:${(100 * c.any_miles) / MILES_MAX}%`} /></div>
+              </div>
+              <div class="crow">
+                <p><span>Protected lane or greenway</span><b>{fmt(c.low_stress_miles, 1)} mi</b></p>
+                <div class="track"><span class="fill low" style={`width:${(100 * c.low_stress_miles) / MILES_MAX}%`} /></div>
+              </div>
+              <details>
+                <summary>Change by facility type</summary>
+                <ul class="diff">
+                  {FACILITIES.map((f) => {
+                    const v = c.by_facility[f.name];
+                    return (
+                      <li class:list={{ neg: v < 0 }}>
+                        <p><span><i class="swatch" style={`background:${f.color}`} />{f.label}</span><b>{signed(v, 1)} mi</b></p>
+                        <div class="track">
+                          <i class="zero" style={`left:${diffPos(0)}%`} />
+                          <span
+                            class="fill"
+                            style={`left:${diffPos(Math.min(0, v))}%;width:${(100 * Math.abs(v)) / (MILES_MAX - DIFF_LO)}%;--c:${f.color}`}
+                          />
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <p class="diff-note">
+                  Striped bars are a loss. They are usually miles the city relabelled or upgraded to another type,
+                  such as a painted lane recorded as buffered, not lanes removed.
+                </p>
+              </details>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+
+    <section id="method" aria-labelledby="h-method">
+      <h2 id="h-method">Method and caveats</h2>
+      <ul class="caveats">
+        <li>
+          History comes from eight archived copies of the city's Bike Routes dataset, each matched to the same street
+          grid. Dates are when the city published or retired each copy. A copy can lag what was on the street: the
+          December 2014 copy shows under 4 miles of protected lanes, fewer than the city was reporting then.
+        </li>
+        <li>
+          A policy is credited with everything built between the copies that bracket it, whatever the cause.
+          Overlapping policies are each credited with the same miles.
+        </li>
+        <li>
+          The city sometimes relabels lanes. Many painted lanes became "buffered" between 2014 and 2016, which moves
+          miles between facility types without anything being built. Totals for any facility are the most reliable.
+        </li>
+        <li>
+          Miles are street centerline miles. Upgrading an existing lane adds nothing to "any facility", and off-street
+          trails are not counted.
+        </li>
+        <li>Policy summaries were compiled from the linked sources. Check them before relying on a date or a figure.</li>
+      </ul>
+      <p class="muted">
+        Data from the <a href="https://data.cityofchicago.org/d/hvv9-38ut">City of Chicago Data Portal</a>.
+        Total gain, December 2014 to December 2025: {fmt(gain, 1)} miles.
+      </p>
+    </section>
+  </div>
+  <script>
+    import "../scripts/timelapse";
+  </script>
+</Base>
