@@ -1,0 +1,1799 @@
+{
+  "generated": "2026-10-06",
+  "citywide": {
+    "street_miles": 3948.83,
+    "any_miles": 443.28,
+    "low_stress_miles": 151.64,
+    "any_pct": 11.23,
+    "low_stress_pct": 3.84,
+    "by_facility": {
+      "Protected Bike Lane": 67.41,
+      "Neighborhood Greenway": 84.23,
+      "Buffered Bike Lane": 107.22,
+      "Bike Lane": 138.01,
+      "Marked Shared Lane": 46.41
+    }
+  },
+  "wards": {
+    "1": {
+      "street_miles": 58.81,
+      "any_miles": 12.1,
+      "low_stress_miles": 4.89,
+      "any_pct": 20.57,
+      "low_stress_pct": 8.31,
+      "by_facility": {
+        "Protected Bike Lane": 2.11,
+        "Neighborhood Greenway": 2.78,
+        "Buffered Bike Lane": 2.31,
+        "Bike Lane": 4.66,
+        "Marked Shared Lane": 0.24
+      }
+    },
+    "10": {
+      "street_miles": 141.54,
+      "any_miles": 15.86,
+      "low_stress_miles": 1.24,
+      "any_pct": 11.21,
+      "low_stress_pct": 0.88,
+      "by_facility": {
+        "Protected Bike Lane": 0.28,
+        "Neighborhood Greenway": 0.96,
+        "Buffered Bike Lane": 6.99,
+        "Bike Lane": 5.58,
+        "Marked Shared Lane": 2.06
+      }
+    },
+    "11": {
+      "street_miles": 81.19,
+      "any_miles": 8.47,
+      "low_stress_miles": 1.94,
+      "any_pct": 10.43,
+      "low_stress_pct": 2.39,
+      "by_facility": {
+        "Protected Bike Lane": 1.94,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.32,
+        "Bike Lane": 3.95,
+        "Marked Shared Lane": 1.26
+      }
+    },
+    "12": {
+      "street_miles": 69.43,
+      "any_miles": 5.31,
+      "low_stress_miles": 3.17,
+      "any_pct": 7.65,
+      "low_stress_pct": 4.57,
+      "by_facility": {
+        "Protected Bike Lane": 1.77,
+        "Neighborhood Greenway": 1.4,
+        "Buffered Bike Lane": 1.02,
+        "Bike Lane": 1.12,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "13": {
+      "street_miles": 96.3,
+      "any_miles": 1.7,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.77,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 1.7
+      }
+    },
+    "14": {
+      "street_miles": 71.18,
+      "any_miles": 1.18,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.65,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.56,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.62
+      }
+    },
+    "15": {
+      "street_miles": 62.43,
+      "any_miles": 2.74,
+      "low_stress_miles": 0.73,
+      "any_pct": 4.38,
+      "low_stress_pct": 1.16,
+      "by_facility": {
+        "Protected Bike Lane": 0.42,
+        "Neighborhood Greenway": 0.31,
+        "Buffered Bike Lane": 0.75,
+        "Bike Lane": 0.88,
+        "Marked Shared Lane": 0.38
+      }
+    },
+    "16": {
+      "street_miles": 100.75,
+      "any_miles": 8.03,
+      "low_stress_miles": 1.53,
+      "any_pct": 7.97,
+      "low_stress_pct": 1.52,
+      "by_facility": {
+        "Protected Bike Lane": 1.53,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 3.02,
+        "Bike Lane": 2.84,
+        "Marked Shared Lane": 0.63
+      }
+    },
+    "17": {
+      "street_miles": 96.24,
+      "any_miles": 9.33,
+      "low_stress_miles": 1.88,
+      "any_pct": 9.7,
+      "low_stress_pct": 1.96,
+      "by_facility": {
+        "Protected Bike Lane": 0.63,
+        "Neighborhood Greenway": 1.25,
+        "Buffered Bike Lane": 3.99,
+        "Bike Lane": 3.2,
+        "Marked Shared Lane": 0.25
+      }
+    },
+    "18": {
+      "street_miles": 124.13,
+      "any_miles": 2.6,
+      "low_stress_miles": 0.0,
+      "any_pct": 2.09,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.89,
+        "Bike Lane": 0.7,
+        "Marked Shared Lane": 1.01
+      }
+    },
+    "19": {
+      "street_miles": 138.43,
+      "any_miles": 5.71,
+      "low_stress_miles": 1.88,
+      "any_pct": 4.13,
+      "low_stress_pct": 1.36,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 1.88,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.5,
+        "Marked Shared Lane": 3.33
+      }
+    },
+    "2": {
+      "street_miles": 25.27,
+      "any_miles": 5.71,
+      "low_stress_miles": 0.93,
+      "any_pct": 22.61,
+      "low_stress_pct": 3.67,
+      "by_facility": {
+        "Protected Bike Lane": 0.38,
+        "Neighborhood Greenway": 0.55,
+        "Buffered Bike Lane": 2.74,
+        "Bike Lane": 1.74,
+        "Marked Shared Lane": 0.31
+      }
+    },
+    "20": {
+      "street_miles": 95.55,
+      "any_miles": 6.98,
+      "low_stress_miles": 1.64,
+      "any_pct": 7.31,
+      "low_stress_pct": 1.72,
+      "by_facility": {
+        "Protected Bike Lane": 1.64,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.95,
+        "Bike Lane": 2.5,
+        "Marked Shared Lane": 0.89
+      }
+    },
+    "21": {
+      "street_miles": 157.46,
+      "any_miles": 10.4,
+      "low_stress_miles": 4.74,
+      "any_pct": 6.6,
+      "low_stress_pct": 3.01,
+      "by_facility": {
+        "Protected Bike Lane": 3.11,
+        "Neighborhood Greenway": 1.63,
+        "Buffered Bike Lane": 3.28,
+        "Bike Lane": 1.74,
+        "Marked Shared Lane": 0.64
+      }
+    },
+    "22": {
+      "street_miles": 59.61,
+      "any_miles": 8.86,
+      "low_stress_miles": 6.59,
+      "any_pct": 14.86,
+      "low_stress_pct": 11.06,
+      "by_facility": {
+        "Protected Bike Lane": 0.3,
+        "Neighborhood Greenway": 6.29,
+        "Buffered Bike Lane": 0.5,
+        "Bike Lane": 1.76,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "23": {
+      "street_miles": 82.75,
+      "any_miles": 0.61,
+      "low_stress_miles": 0.0,
+      "any_pct": 0.73,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.02,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.58
+      }
+    },
+    "24": {
+      "street_miles": 83.04,
+      "any_miles": 14.97,
+      "low_stress_miles": 7.98,
+      "any_pct": 18.03,
+      "low_stress_pct": 9.61,
+      "by_facility": {
+        "Protected Bike Lane": 3.16,
+        "Neighborhood Greenway": 4.82,
+        "Buffered Bike Lane": 1.23,
+        "Bike Lane": 4.69,
+        "Marked Shared Lane": 1.07
+      }
+    },
+    "25": {
+      "street_miles": 60.88,
+      "any_miles": 11.25,
+      "low_stress_miles": 2.69,
+      "any_pct": 18.48,
+      "low_stress_pct": 4.42,
+      "by_facility": {
+        "Protected Bike Lane": 1.31,
+        "Neighborhood Greenway": 1.38,
+        "Buffered Bike Lane": 1.53,
+        "Bike Lane": 6.53,
+        "Marked Shared Lane": 0.5
+      }
+    },
+    "26": {
+      "street_miles": 59.24,
+      "any_miles": 8.12,
+      "low_stress_miles": 1.06,
+      "any_pct": 13.7,
+      "low_stress_pct": 1.79,
+      "by_facility": {
+        "Protected Bike Lane": 0.51,
+        "Neighborhood Greenway": 0.55,
+        "Buffered Bike Lane": 3.21,
+        "Bike Lane": 3.84,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "27": {
+      "street_miles": 123.8,
+      "any_miles": 25.25,
+      "low_stress_miles": 8.32,
+      "any_pct": 20.39,
+      "low_stress_pct": 6.72,
+      "by_facility": {
+        "Protected Bike Lane": 8.24,
+        "Neighborhood Greenway": 0.08,
+        "Buffered Bike Lane": 8.34,
+        "Bike Lane": 5.71,
+        "Marked Shared Lane": 2.87
+      }
+    },
+    "28": {
+      "street_miles": 108.42,
+      "any_miles": 25.47,
+      "low_stress_miles": 8.89,
+      "any_pct": 23.49,
+      "low_stress_pct": 8.2,
+      "by_facility": {
+        "Protected Bike Lane": 6.97,
+        "Neighborhood Greenway": 1.92,
+        "Buffered Bike Lane": 7.28,
+        "Bike Lane": 8.18,
+        "Marked Shared Lane": 1.12
+      }
+    },
+    "29": {
+      "street_miles": 77.22,
+      "any_miles": 7.87,
+      "low_stress_miles": 3.56,
+      "any_pct": 10.19,
+      "low_stress_pct": 4.61,
+      "by_facility": {
+        "Protected Bike Lane": 0.53,
+        "Neighborhood Greenway": 3.03,
+        "Buffered Bike Lane": 1.01,
+        "Bike Lane": 2.21,
+        "Marked Shared Lane": 1.09
+      }
+    },
+    "3": {
+      "street_miles": 70.67,
+      "any_miles": 9.91,
+      "low_stress_miles": 5.48,
+      "any_pct": 14.02,
+      "low_stress_pct": 7.75,
+      "by_facility": {
+        "Protected Bike Lane": 5.48,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 2.33,
+        "Bike Lane": 1.08,
+        "Marked Shared Lane": 1.02
+      }
+    },
+    "30": {
+      "street_miles": 76.0,
+      "any_miles": 9.65,
+      "low_stress_miles": 6.07,
+      "any_pct": 12.7,
+      "low_stress_pct": 7.99,
+      "by_facility": {
+        "Protected Bike Lane": 1.23,
+        "Neighborhood Greenway": 4.84,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 2.13,
+        "Marked Shared Lane": 1.45
+      }
+    },
+    "31": {
+      "street_miles": 60.39,
+      "any_miles": 7.61,
+      "low_stress_miles": 2.85,
+      "any_pct": 12.61,
+      "low_stress_pct": 4.72,
+      "by_facility": {
+        "Protected Bike Lane": 0.25,
+        "Neighborhood Greenway": 2.6,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 4.76,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "32": {
+      "street_miles": 71.42,
+      "any_miles": 16.4,
+      "low_stress_miles": 5.9,
+      "any_pct": 22.96,
+      "low_stress_pct": 8.27,
+      "by_facility": {
+        "Protected Bike Lane": 1.76,
+        "Neighborhood Greenway": 4.15,
+        "Buffered Bike Lane": 4.39,
+        "Bike Lane": 5.94,
+        "Marked Shared Lane": 0.16
+      }
+    },
+    "33": {
+      "street_miles": 48.57,
+      "any_miles": 10.34,
+      "low_stress_miles": 4.35,
+      "any_pct": 21.29,
+      "low_stress_pct": 8.95,
+      "by_facility": {
+        "Protected Bike Lane": 0.22,
+        "Neighborhood Greenway": 4.13,
+        "Buffered Bike Lane": 1.17,
+        "Bike Lane": 4.2,
+        "Marked Shared Lane": 0.62
+      }
+    },
+    "34": {
+      "street_miles": 33.19,
+      "any_miles": 9.6,
+      "low_stress_miles": 5.63,
+      "any_pct": 28.93,
+      "low_stress_pct": 16.95,
+      "by_facility": {
+        "Protected Bike Lane": 5.63,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.9,
+        "Bike Lane": 1.43,
+        "Marked Shared Lane": 0.65
+      }
+    },
+    "35": {
+      "street_miles": 60.21,
+      "any_miles": 13.0,
+      "low_stress_miles": 5.54,
+      "any_pct": 21.59,
+      "low_stress_pct": 9.2,
+      "by_facility": {
+        "Protected Bike Lane": 3.01,
+        "Neighborhood Greenway": 2.52,
+        "Buffered Bike Lane": 1.93,
+        "Bike Lane": 4.91,
+        "Marked Shared Lane": 0.62
+      }
+    },
+    "36": {
+      "street_miles": 66.26,
+      "any_miles": 8.3,
+      "low_stress_miles": 1.19,
+      "any_pct": 12.52,
+      "low_stress_pct": 1.8,
+      "by_facility": {
+        "Protected Bike Lane": 0.73,
+        "Neighborhood Greenway": 0.46,
+        "Buffered Bike Lane": 2.01,
+        "Bike Lane": 3.97,
+        "Marked Shared Lane": 1.12
+      }
+    },
+    "37": {
+      "street_miles": 71.43,
+      "any_miles": 7.58,
+      "low_stress_miles": 4.21,
+      "any_pct": 10.62,
+      "low_stress_pct": 5.89,
+      "by_facility": {
+        "Protected Bike Lane": 0.9,
+        "Neighborhood Greenway": 3.31,
+        "Buffered Bike Lane": 0.26,
+        "Bike Lane": 3.02,
+        "Marked Shared Lane": 0.09
+      }
+    },
+    "38": {
+      "street_miles": 100.16,
+      "any_miles": 1.06,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.06,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.4,
+        "Bike Lane": 0.25,
+        "Marked Shared Lane": 0.41
+      }
+    },
+    "39": {
+      "street_miles": 105.84,
+      "any_miles": 7.4,
+      "low_stress_miles": 1.45,
+      "any_pct": 7.0,
+      "low_stress_pct": 1.37,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 1.45,
+        "Buffered Bike Lane": 3.69,
+        "Bike Lane": 1.96,
+        "Marked Shared Lane": 0.31
+      }
+    },
+    "4": {
+      "street_miles": 64.39,
+      "any_miles": 8.6,
+      "low_stress_miles": 1.88,
+      "any_pct": 13.36,
+      "low_stress_pct": 2.93,
+      "by_facility": {
+        "Protected Bike Lane": 1.71,
+        "Neighborhood Greenway": 0.17,
+        "Buffered Bike Lane": 4.85,
+        "Bike Lane": 1.52,
+        "Marked Shared Lane": 0.34
+      }
+    },
+    "40": {
+      "street_miles": 63.02,
+      "any_miles": 12.43,
+      "low_stress_miles": 9.14,
+      "any_pct": 19.73,
+      "low_stress_pct": 14.5,
+      "by_facility": {
+        "Protected Bike Lane": 1.79,
+        "Neighborhood Greenway": 7.35,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 3.26,
+        "Marked Shared Lane": 0.04
+      }
+    },
+    "41": {
+      "street_miles": 126.92,
+      "any_miles": 2.05,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.62,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 1.31,
+        "Marked Shared Lane": 0.74
+      }
+    },
+    "42": {
+      "street_miles": 38.23,
+      "any_miles": 7.41,
+      "low_stress_miles": 2.76,
+      "any_pct": 19.39,
+      "low_stress_pct": 7.23,
+      "by_facility": {
+        "Protected Bike Lane": 2.76,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.84,
+        "Bike Lane": 2.3,
+        "Marked Shared Lane": 0.51
+      }
+    },
+    "43": {
+      "street_miles": 41.12,
+      "any_miles": 7.19,
+      "low_stress_miles": 1.05,
+      "any_pct": 17.48,
+      "low_stress_pct": 2.54,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 1.05,
+        "Buffered Bike Lane": 1.29,
+        "Bike Lane": 3.8,
+        "Marked Shared Lane": 1.04
+      }
+    },
+    "44": {
+      "street_miles": 32.52,
+      "any_miles": 6.46,
+      "low_stress_miles": 2.54,
+      "any_pct": 19.88,
+      "low_stress_pct": 7.82,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 2.54,
+        "Buffered Bike Lane": 1.41,
+        "Bike Lane": 2.07,
+        "Marked Shared Lane": 0.43
+      }
+    },
+    "45": {
+      "street_miles": 107.06,
+      "any_miles": 10.02,
+      "low_stress_miles": 0.52,
+      "any_pct": 9.36,
+      "low_stress_pct": 0.49,
+      "by_facility": {
+        "Protected Bike Lane": 0.32,
+        "Neighborhood Greenway": 0.2,
+        "Buffered Bike Lane": 6.22,
+        "Bike Lane": 1.35,
+        "Marked Shared Lane": 1.93
+      }
+    },
+    "46": {
+      "street_miles": 30.2,
+      "any_miles": 7.12,
+      "low_stress_miles": 2.54,
+      "any_pct": 23.57,
+      "low_stress_pct": 8.42,
+      "by_facility": {
+        "Protected Bike Lane": 1.11,
+        "Neighborhood Greenway": 1.43,
+        "Buffered Bike Lane": 0.61,
+        "Bike Lane": 0.61,
+        "Marked Shared Lane": 3.36
+      }
+    },
+    "47": {
+      "street_miles": 64.07,
+      "any_miles": 16.91,
+      "low_stress_miles": 8.14,
+      "any_pct": 26.39,
+      "low_stress_pct": 12.7,
+      "by_facility": {
+        "Protected Bike Lane": 1.54,
+        "Neighborhood Greenway": 6.6,
+        "Buffered Bike Lane": 0.06,
+        "Bike Lane": 7.45,
+        "Marked Shared Lane": 1.26
+      }
+    },
+    "48": {
+      "street_miles": 29.33,
+      "any_miles": 8.88,
+      "low_stress_miles": 7.36,
+      "any_pct": 30.26,
+      "low_stress_pct": 25.08,
+      "by_facility": {
+        "Protected Bike Lane": 0.45,
+        "Neighborhood Greenway": 6.91,
+        "Buffered Bike Lane": 0.43,
+        "Bike Lane": 1.08,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "49": {
+      "street_miles": 36.82,
+      "any_miles": 8.21,
+      "low_stress_miles": 3.58,
+      "any_pct": 22.3,
+      "low_stress_pct": 9.74,
+      "by_facility": {
+        "Protected Bike Lane": 0.25,
+        "Neighborhood Greenway": 3.33,
+        "Buffered Bike Lane": 0.29,
+        "Bike Lane": 1.1,
+        "Marked Shared Lane": 3.24
+      }
+    },
+    "5": {
+      "street_miles": 65.45,
+      "any_miles": 5.81,
+      "low_stress_miles": 1.56,
+      "any_pct": 8.88,
+      "low_stress_pct": 2.38,
+      "by_facility": {
+        "Protected Bike Lane": 1.56,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 3.63,
+        "Bike Lane": 0.2,
+        "Marked Shared Lane": 0.42
+      }
+    },
+    "50": {
+      "street_miles": 57.81,
+      "any_miles": 4.4,
+      "low_stress_miles": 0.88,
+      "any_pct": 7.61,
+      "low_stress_pct": 1.52,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.88,
+        "Buffered Bike Lane": 0.5,
+        "Bike Lane": 2.15,
+        "Marked Shared Lane": 0.87
+      }
+    },
+    "6": {
+      "street_miles": 103.56,
+      "any_miles": 11.93,
+      "low_stress_miles": 0.68,
+      "any_pct": 11.52,
+      "low_stress_pct": 0.65,
+      "by_facility": {
+        "Protected Bike Lane": 0.22,
+        "Neighborhood Greenway": 0.45,
+        "Buffered Bike Lane": 4.94,
+        "Bike Lane": 3.7,
+        "Marked Shared Lane": 2.6
+      }
+    },
+    "7": {
+      "street_miles": 92.08,
+      "any_miles": 6.84,
+      "low_stress_miles": 0.08,
+      "any_pct": 7.43,
+      "low_stress_pct": 0.09,
+      "by_facility": {
+        "Protected Bike Lane": 0.08,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 3.39,
+        "Bike Lane": 3.36,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "8": {
+      "street_miles": 121.12,
+      "any_miles": 7.42,
+      "low_stress_miles": 0.54,
+      "any_pct": 6.13,
+      "low_stress_pct": 0.45,
+      "by_facility": {
+        "Protected Bike Lane": 0.54,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 4.65,
+        "Bike Lane": 1.56,
+        "Marked Shared Lane": 0.67
+      }
+    },
+    "9": {
+      "street_miles": 137.33,
+      "any_miles": 12.22,
+      "low_stress_miles": 2.04,
+      "any_pct": 8.9,
+      "low_stress_pct": 1.48,
+      "by_facility": {
+        "Protected Bike Lane": 1.04,
+        "Neighborhood Greenway": 1.0,
+        "Buffered Bike Lane": 3.07,
+        "Bike Lane": 5.19,
+        "Marked Shared Lane": 1.93
+      }
+    }
+  },
+  "community_areas": {
+    "1": {
+      "street_miles": 36.75,
+      "any_miles": 8.19,
+      "low_stress_miles": 3.58,
+      "any_pct": 22.3,
+      "low_stress_pct": 9.75,
+      "by_facility": {
+        "Protected Bike Lane": 0.25,
+        "Neighborhood Greenway": 3.33,
+        "Buffered Bike Lane": 0.15,
+        "Bike Lane": 1.21,
+        "Marked Shared Lane": 3.24
+      }
+    },
+    "10": {
+      "street_miles": 91.64,
+      "any_miles": 2.81,
+      "low_stress_miles": 0.0,
+      "any_pct": 3.07,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.51,
+        "Bike Lane": 1.3,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "11": {
+      "street_miles": 48.6,
+      "any_miles": 5.6,
+      "low_stress_miles": 0.0,
+      "any_pct": 11.53,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 4.13,
+        "Bike Lane": 0.67,
+        "Marked Shared Lane": 0.8
+      }
+    },
+    "12": {
+      "street_miles": 57.67,
+      "any_miles": 0.85,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.48,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.67,
+        "Bike Lane": 0.18,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "13": {
+      "street_miles": 31.01,
+      "any_miles": 2.05,
+      "low_stress_miles": 0.36,
+      "any_pct": 6.6,
+      "low_stress_pct": 1.15,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.36,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 1.38,
+        "Marked Shared Lane": 0.31
+      }
+    },
+    "14": {
+      "street_miles": 42.85,
+      "any_miles": 6.53,
+      "low_stress_miles": 2.06,
+      "any_pct": 15.25,
+      "low_stress_pct": 4.82,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 2.06,
+        "Buffered Bike Lane": 2.27,
+        "Bike Lane": 2.2,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "15": {
+      "street_miles": 87.3,
+      "any_miles": 6.87,
+      "low_stress_miles": 3.08,
+      "any_pct": 7.87,
+      "low_stress_pct": 3.53,
+      "by_facility": {
+        "Protected Bike Lane": 0.32,
+        "Neighborhood Greenway": 2.75,
+        "Buffered Bike Lane": 0.49,
+        "Bike Lane": 1.51,
+        "Marked Shared Lane": 1.78
+      }
+    },
+    "16": {
+      "street_miles": 69.53,
+      "any_miles": 10.25,
+      "low_stress_miles": 5.73,
+      "any_pct": 14.74,
+      "low_stress_pct": 8.24,
+      "by_facility": {
+        "Protected Bike Lane": 1.01,
+        "Neighborhood Greenway": 4.72,
+        "Buffered Bike Lane": 1.94,
+        "Bike Lane": 1.57,
+        "Marked Shared Lane": 1.01
+      }
+    },
+    "17": {
+      "street_miles": 72.71,
+      "any_miles": 2.3,
+      "low_stress_miles": 0.51,
+      "any_pct": 3.16,
+      "low_stress_pct": 0.7,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.51,
+        "Buffered Bike Lane": 0.4,
+        "Bike Lane": 0.25,
+        "Marked Shared Lane": 1.14
+      }
+    },
+    "18": {
+      "street_miles": 20.36,
+      "any_miles": 0.0,
+      "low_stress_miles": 0.0,
+      "any_pct": 0.0,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "19": {
+      "street_miles": 82.87,
+      "any_miles": 12.0,
+      "low_stress_miles": 2.43,
+      "any_pct": 14.48,
+      "low_stress_pct": 2.93,
+      "by_facility": {
+        "Protected Bike Lane": 0.36,
+        "Neighborhood Greenway": 2.07,
+        "Buffered Bike Lane": 1.18,
+        "Bike Lane": 6.75,
+        "Marked Shared Lane": 1.64
+      }
+    },
+    "2": {
+      "street_miles": 74.66,
+      "any_miles": 6.53,
+      "low_stress_miles": 2.28,
+      "any_pct": 8.75,
+      "low_stress_pct": 3.05,
+      "by_facility": {
+        "Protected Bike Lane": 0.51,
+        "Neighborhood Greenway": 1.77,
+        "Buffered Bike Lane": 0.5,
+        "Bike Lane": 2.88,
+        "Marked Shared Lane": 0.87
+      }
+    },
+    "20": {
+      "street_miles": 24.31,
+      "any_miles": 2.56,
+      "low_stress_miles": 1.14,
+      "any_pct": 10.53,
+      "low_stress_pct": 4.68,
+      "by_facility": {
+        "Protected Bike Lane": 0.11,
+        "Neighborhood Greenway": 1.02,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 1.42,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "21": {
+      "street_miles": 40.76,
+      "any_miles": 8.77,
+      "low_stress_miles": 3.72,
+      "any_pct": 21.5,
+      "low_stress_pct": 9.12,
+      "by_facility": {
+        "Protected Bike Lane": 2.96,
+        "Neighborhood Greenway": 0.76,
+        "Buffered Bike Lane": 1.91,
+        "Bike Lane": 2.9,
+        "Marked Shared Lane": 0.23
+      }
+    },
+    "22": {
+      "street_miles": 83.03,
+      "any_miles": 18.84,
+      "low_stress_miles": 7.94,
+      "any_pct": 22.69,
+      "low_stress_pct": 9.56,
+      "by_facility": {
+        "Protected Bike Lane": 2.99,
+        "Neighborhood Greenway": 4.95,
+        "Buffered Bike Lane": 2.53,
+        "Bike Lane": 8.21,
+        "Marked Shared Lane": 0.16
+      }
+    },
+    "23": {
+      "street_miles": 70.74,
+      "any_miles": 4.69,
+      "low_stress_miles": 1.11,
+      "any_pct": 6.63,
+      "low_stress_pct": 1.58,
+      "by_facility": {
+        "Protected Bike Lane": 1.11,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.65,
+        "Bike Lane": 1.93,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "24": {
+      "street_miles": 103.74,
+      "any_miles": 21.28,
+      "low_stress_miles": 8.1,
+      "any_pct": 20.51,
+      "low_stress_pct": 7.81,
+      "by_facility": {
+        "Protected Bike Lane": 5.72,
+        "Neighborhood Greenway": 2.38,
+        "Buffered Bike Lane": 6.66,
+        "Bike Lane": 5.6,
+        "Marked Shared Lane": 0.91
+      }
+    },
+    "25": {
+      "street_miles": 134.86,
+      "any_miles": 18.69,
+      "low_stress_miles": 8.98,
+      "any_pct": 13.86,
+      "low_stress_pct": 6.66,
+      "by_facility": {
+        "Protected Bike Lane": 1.87,
+        "Neighborhood Greenway": 7.11,
+        "Buffered Bike Lane": 2.48,
+        "Bike Lane": 6.06,
+        "Marked Shared Lane": 1.17
+      }
+    },
+    "26": {
+      "street_miles": 28.98,
+      "any_miles": 5.01,
+      "low_stress_miles": 2.65,
+      "any_pct": 17.29,
+      "low_stress_pct": 9.15,
+      "by_facility": {
+        "Protected Bike Lane": 1.31,
+        "Neighborhood Greenway": 1.34,
+        "Buffered Bike Lane": 2.02,
+        "Bike Lane": 0.34,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "27": {
+      "street_miles": 41.56,
+      "any_miles": 11.96,
+      "low_stress_miles": 4.27,
+      "any_pct": 28.78,
+      "low_stress_pct": 10.27,
+      "by_facility": {
+        "Protected Bike Lane": 3.02,
+        "Neighborhood Greenway": 1.25,
+        "Buffered Bike Lane": 4.01,
+        "Bike Lane": 2.29,
+        "Marked Shared Lane": 1.4
+      }
+    },
+    "28": {
+      "street_miles": 113.31,
+      "any_miles": 28.31,
+      "low_stress_miles": 9.72,
+      "any_pct": 24.98,
+      "low_stress_pct": 8.58,
+      "by_facility": {
+        "Protected Bike Lane": 9.72,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 6.47,
+        "Bike Lane": 9.86,
+        "Marked Shared Lane": 2.25
+      }
+    },
+    "29": {
+      "street_miles": 68.57,
+      "any_miles": 11.65,
+      "low_stress_miles": 6.06,
+      "any_pct": 17.0,
+      "low_stress_pct": 8.83,
+      "by_facility": {
+        "Protected Bike Lane": 2.45,
+        "Neighborhood Greenway": 3.61,
+        "Buffered Bike Lane": 0.19,
+        "Bike Lane": 4.54,
+        "Marked Shared Lane": 0.87
+      }
+    },
+    "3": {
+      "street_miles": 34.92,
+      "any_miles": 11.32,
+      "low_stress_miles": 5.68,
+      "any_pct": 32.42,
+      "low_stress_pct": 16.26,
+      "by_facility": {
+        "Protected Bike Lane": 1.56,
+        "Neighborhood Greenway": 4.12,
+        "Buffered Bike Lane": 0.81,
+        "Bike Lane": 1.34,
+        "Marked Shared Lane": 3.49
+      }
+    },
+    "30": {
+      "street_miles": 66.16,
+      "any_miles": 14.17,
+      "low_stress_miles": 7.79,
+      "any_pct": 21.42,
+      "low_stress_pct": 11.78,
+      "by_facility": {
+        "Protected Bike Lane": 0.97,
+        "Neighborhood Greenway": 6.83,
+        "Buffered Bike Lane": 2.49,
+        "Bike Lane": 3.79,
+        "Marked Shared Lane": 0.1
+      }
+    },
+    "31": {
+      "street_miles": 46.61,
+      "any_miles": 8.06,
+      "low_stress_miles": 1.44,
+      "any_pct": 17.29,
+      "low_stress_pct": 3.08,
+      "by_facility": {
+        "Protected Bike Lane": 0.8,
+        "Neighborhood Greenway": 0.63,
+        "Buffered Bike Lane": 1.39,
+        "Bike Lane": 4.74,
+        "Marked Shared Lane": 0.5
+      }
+    },
+    "32": {
+      "street_miles": 32.05,
+      "any_miles": 6.73,
+      "low_stress_miles": 4.14,
+      "any_pct": 20.98,
+      "low_stress_pct": 12.91,
+      "by_facility": {
+        "Protected Bike Lane": 3.97,
+        "Neighborhood Greenway": 0.17,
+        "Buffered Bike Lane": 1.04,
+        "Bike Lane": 0.67,
+        "Marked Shared Lane": 0.87
+      }
+    },
+    "33": {
+      "street_miles": 25.5,
+      "any_miles": 3.9,
+      "low_stress_miles": 2.39,
+      "any_pct": 15.31,
+      "low_stress_pct": 9.37,
+      "by_facility": {
+        "Protected Bike Lane": 2.39,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.35,
+        "Bike Lane": 0.86,
+        "Marked Shared Lane": 0.3
+      }
+    },
+    "34": {
+      "street_miles": 18.79,
+      "any_miles": 2.39,
+      "low_stress_miles": 0.5,
+      "any_pct": 12.74,
+      "low_stress_pct": 2.67,
+      "by_facility": {
+        "Protected Bike Lane": 0.5,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.85,
+        "Bike Lane": 0.72,
+        "Marked Shared Lane": 0.32
+      }
+    },
+    "35": {
+      "street_miles": 29.39,
+      "any_miles": 5.89,
+      "low_stress_miles": 2.15,
+      "any_pct": 20.03,
+      "low_stress_pct": 7.3,
+      "by_facility": {
+        "Protected Bike Lane": 2.15,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 2.61,
+        "Bike Lane": 0.25,
+        "Marked Shared Lane": 0.89
+      }
+    },
+    "36": {
+      "street_miles": 9.26,
+      "any_miles": 1.58,
+      "low_stress_miles": 0.0,
+      "any_pct": 17.11,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.87,
+        "Bike Lane": 0.71,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "37": {
+      "street_miles": 12.91,
+      "any_miles": 0.35,
+      "low_stress_miles": 0.0,
+      "any_pct": 2.74,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.11,
+        "Bike Lane": 0.25,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "38": {
+      "street_miles": 38.66,
+      "any_miles": 4.12,
+      "low_stress_miles": 1.5,
+      "any_pct": 10.65,
+      "low_stress_pct": 3.88,
+      "by_facility": {
+        "Protected Bike Lane": 1.5,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 2.09,
+        "Bike Lane": 0.52,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "39": {
+      "street_miles": 16.75,
+      "any_miles": 1.01,
+      "low_stress_miles": 0.0,
+      "any_pct": 6.0,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.01,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "4": {
+      "street_miles": 46.66,
+      "any_miles": 14.98,
+      "low_stress_miles": 8.58,
+      "any_pct": 32.09,
+      "low_stress_pct": 18.39,
+      "by_facility": {
+        "Protected Bike Lane": 0.71,
+        "Neighborhood Greenway": 7.87,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 5.64,
+        "Marked Shared Lane": 0.75
+      }
+    },
+    "40": {
+      "street_miles": 24.38,
+      "any_miles": 2.93,
+      "low_stress_miles": 1.52,
+      "any_pct": 12.0,
+      "low_stress_pct": 6.23,
+      "by_facility": {
+        "Protected Bike Lane": 1.52,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.02,
+        "Bike Lane": 1.13,
+        "Marked Shared Lane": 0.25
+      }
+    },
+    "41": {
+      "street_miles": 29.63,
+      "any_miles": 2.52,
+      "low_stress_miles": 0.81,
+      "any_pct": 8.5,
+      "low_stress_pct": 2.74,
+      "by_facility": {
+        "Protected Bike Lane": 0.81,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.78,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.93
+      }
+    },
+    "42": {
+      "street_miles": 37.19,
+      "any_miles": 3.03,
+      "low_stress_miles": 0.0,
+      "any_pct": 8.14,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.52,
+        "Bike Lane": 1.38,
+        "Marked Shared Lane": 0.12
+      }
+    },
+    "43": {
+      "street_miles": 65.92,
+      "any_miles": 4.43,
+      "low_stress_miles": 0.11,
+      "any_pct": 6.71,
+      "low_stress_pct": 0.16,
+      "by_facility": {
+        "Protected Bike Lane": 0.11,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 4.32,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "44": {
+      "street_miles": 56.31,
+      "any_miles": 3.74,
+      "low_stress_miles": 0.28,
+      "any_pct": 6.64,
+      "low_stress_pct": 0.5,
+      "by_facility": {
+        "Protected Bike Lane": 0.08,
+        "Neighborhood Greenway": 0.2,
+        "Buffered Bike Lane": 1.16,
+        "Bike Lane": 0.72,
+        "Marked Shared Lane": 1.58
+      }
+    },
+    "45": {
+      "street_miles": 26.67,
+      "any_miles": 2.6,
+      "low_stress_miles": 0.0,
+      "any_pct": 9.76,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.61,
+        "Bike Lane": 0.38,
+        "Marked Shared Lane": 0.61
+      }
+    },
+    "46": {
+      "street_miles": 54.41,
+      "any_miles": 7.0,
+      "low_stress_miles": 0.25,
+      "any_pct": 12.86,
+      "low_stress_pct": 0.46,
+      "by_facility": {
+        "Protected Bike Lane": 0.25,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 2.97,
+        "Bike Lane": 3.55,
+        "Marked Shared Lane": 0.22
+      }
+    },
+    "47": {
+      "street_miles": 8.2,
+      "any_miles": 0.08,
+      "low_stress_miles": 0.03,
+      "any_pct": 0.95,
+      "low_stress_pct": 0.4,
+      "by_facility": {
+        "Protected Bike Lane": 0.03,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.04,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "48": {
+      "street_miles": 37.37,
+      "any_miles": 2.5,
+      "low_stress_miles": 0.11,
+      "any_pct": 6.7,
+      "low_stress_pct": 0.31,
+      "by_facility": {
+        "Protected Bike Lane": 0.11,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.61,
+        "Bike Lane": 1.77,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "49": {
+      "street_miles": 98.02,
+      "any_miles": 10.65,
+      "low_stress_miles": 0.28,
+      "any_pct": 10.87,
+      "low_stress_pct": 0.28,
+      "by_facility": {
+        "Protected Bike Lane": 0.28,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 3.3,
+        "Bike Lane": 5.05,
+        "Marked Shared Lane": 2.03
+      }
+    },
+    "5": {
+      "street_miles": 44.32,
+      "any_miles": 9.79,
+      "low_stress_miles": 3.97,
+      "any_pct": 22.08,
+      "low_stress_pct": 8.95,
+      "by_facility": {
+        "Protected Bike Lane": 0.75,
+        "Neighborhood Greenway": 3.22,
+        "Buffered Bike Lane": 1.21,
+        "Bike Lane": 4.61,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "50": {
+      "street_miles": 24.43,
+      "any_miles": 2.23,
+      "low_stress_miles": 1.23,
+      "any_pct": 9.15,
+      "low_stress_pct": 5.02,
+      "by_facility": {
+        "Protected Bike Lane": 1.23,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.94,
+        "Bike Lane": 0.06,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "51": {
+      "street_miles": 53.08,
+      "any_miles": 4.07,
+      "low_stress_miles": 0.0,
+      "any_pct": 7.66,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 3.04,
+        "Bike Lane": 1.03,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "52": {
+      "street_miles": 42.74,
+      "any_miles": 5.05,
+      "low_stress_miles": 0.71,
+      "any_pct": 11.81,
+      "low_stress_pct": 1.65,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.71,
+        "Buffered Bike Lane": 1.69,
+        "Bike Lane": 2.18,
+        "Marked Shared Lane": 0.48
+      }
+    },
+    "53": {
+      "street_miles": 70.89,
+      "any_miles": 4.54,
+      "low_stress_miles": 2.03,
+      "any_pct": 6.4,
+      "low_stress_pct": 2.86,
+      "by_facility": {
+        "Protected Bike Lane": 1.03,
+        "Neighborhood Greenway": 1.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 2.0,
+        "Marked Shared Lane": 0.5
+      }
+    },
+    "54": {
+      "street_miles": 20.86,
+      "any_miles": 0.0,
+      "low_stress_miles": 0.0,
+      "any_pct": 0.0,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "55": {
+      "street_miles": 32.72,
+      "any_miles": 3.42,
+      "low_stress_miles": 0.25,
+      "any_pct": 10.46,
+      "low_stress_pct": 0.77,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.25,
+        "Buffered Bike Lane": 0.85,
+        "Bike Lane": 0.96,
+        "Marked Shared Lane": 1.36
+      }
+    },
+    "56": {
+      "street_miles": 77.98,
+      "any_miles": 0.0,
+      "low_stress_miles": 0.0,
+      "any_pct": 0.0,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "57": {
+      "street_miles": 28.04,
+      "any_miles": 0.0,
+      "low_stress_miles": 0.0,
+      "any_pct": 0.0,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "58": {
+      "street_miles": 47.78,
+      "any_miles": 3.39,
+      "low_stress_miles": 2.81,
+      "any_pct": 7.09,
+      "low_stress_pct": 5.88,
+      "by_facility": {
+        "Protected Bike Lane": 1.1,
+        "Neighborhood Greenway": 1.71,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.58,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "59": {
+      "street_miles": 27.79,
+      "any_miles": 1.05,
+      "low_stress_miles": 0.33,
+      "any_pct": 3.77,
+      "low_stress_pct": 1.19,
+      "by_facility": {
+        "Protected Bike Lane": 0.33,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.59,
+        "Bike Lane": 0.13,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "6": {
+      "street_miles": 66.19,
+      "any_miles": 11.97,
+      "low_stress_miles": 4.31,
+      "any_pct": 18.08,
+      "low_stress_pct": 6.51,
+      "by_facility": {
+        "Protected Bike Lane": 0.35,
+        "Neighborhood Greenway": 3.96,
+        "Buffered Bike Lane": 1.55,
+        "Bike Lane": 5.31,
+        "Marked Shared Lane": 0.8
+      }
+    },
+    "60": {
+      "street_miles": 42.23,
+      "any_miles": 4.44,
+      "low_stress_miles": 0.36,
+      "any_pct": 10.52,
+      "low_stress_pct": 0.85,
+      "by_facility": {
+        "Protected Bike Lane": 0.36,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.5,
+        "Bike Lane": 2.64,
+        "Marked Shared Lane": 0.94
+      }
+    },
+    "61": {
+      "street_miles": 77.48,
+      "any_miles": 4.79,
+      "low_stress_miles": 2.71,
+      "any_pct": 6.19,
+      "low_stress_pct": 3.5,
+      "by_facility": {
+        "Protected Bike Lane": 2.71,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.7,
+        "Bike Lane": 1.38,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "62": {
+      "street_miles": 25.24,
+      "any_miles": 0.57,
+      "low_stress_miles": 0.0,
+      "any_pct": 2.26,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.57
+      }
+    },
+    "63": {
+      "street_miles": 43.22,
+      "any_miles": 0.72,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.66,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.72
+      }
+    },
+    "64": {
+      "street_miles": 43.01,
+      "any_miles": 1.01,
+      "low_stress_miles": 0.0,
+      "any_pct": 2.35,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 1.01
+      }
+    },
+    "65": {
+      "street_miles": 48.18,
+      "any_miles": 0.71,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.47,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.02,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.68
+      }
+    },
+    "66": {
+      "street_miles": 69.73,
+      "any_miles": 4.3,
+      "low_stress_miles": 0.0,
+      "any_pct": 6.16,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 3.0,
+        "Bike Lane": 0.24,
+        "Marked Shared Lane": 1.06
+      }
+    },
+    "67": {
+      "street_miles": 68.73,
+      "any_miles": 5.72,
+      "low_stress_miles": 0.52,
+      "any_pct": 8.32,
+      "low_stress_pct": 0.76,
+      "by_facility": {
+        "Protected Bike Lane": 0.52,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 2.51,
+        "Bike Lane": 2.56,
+        "Marked Shared Lane": 0.13
+      }
+    },
+    "68": {
+      "street_miles": 68.11,
+      "any_miles": 3.6,
+      "low_stress_miles": 0.88,
+      "any_pct": 5.28,
+      "low_stress_pct": 1.29,
+      "by_facility": {
+        "Protected Bike Lane": 0.88,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 1.83,
+        "Bike Lane": 0.88,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "69": {
+      "street_miles": 65.37,
+      "any_miles": 9.3,
+      "low_stress_miles": 0.8,
+      "any_pct": 14.23,
+      "low_stress_pct": 1.23,
+      "by_facility": {
+        "Protected Bike Lane": 0.8,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 4.86,
+        "Bike Lane": 3.0,
+        "Marked Shared Lane": 0.63
+      }
+    },
+    "7": {
+      "street_miles": 61.1,
+      "any_miles": 11.7,
+      "low_stress_miles": 1.57,
+      "any_pct": 19.15,
+      "low_stress_pct": 2.58,
+      "by_facility": {
+        "Protected Bike Lane": 0.35,
+        "Neighborhood Greenway": 1.22,
+        "Buffered Bike Lane": 3.56,
+        "Bike Lane": 5.52,
+        "Marked Shared Lane": 1.04
+      }
+    },
+    "70": {
+      "street_miles": 92.32,
+      "any_miles": 1.46,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.58,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.45,
+        "Marked Shared Lane": 1.01
+      }
+    },
+    "71": {
+      "street_miles": 83.84,
+      "any_miles": 9.04,
+      "low_stress_miles": 1.88,
+      "any_pct": 10.78,
+      "low_stress_pct": 2.24,
+      "by_facility": {
+        "Protected Bike Lane": 0.13,
+        "Neighborhood Greenway": 1.75,
+        "Buffered Bike Lane": 3.95,
+        "Bike Lane": 3.2,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "72": {
+      "street_miles": 58.84,
+      "any_miles": 4.33,
+      "low_stress_miles": 1.88,
+      "any_pct": 7.36,
+      "low_stress_pct": 3.2,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 1.88,
+        "Buffered Bike Lane": 0.16,
+        "Bike Lane": 0.5,
+        "Marked Shared Lane": 1.79
+      }
+    },
+    "73": {
+      "street_miles": 64.45,
+      "any_miles": 4.62,
+      "low_stress_miles": 3.23,
+      "any_pct": 7.17,
+      "low_stress_pct": 5.01,
+      "by_facility": {
+        "Protected Bike Lane": 1.84,
+        "Neighborhood Greenway": 1.39,
+        "Buffered Bike Lane": 1.26,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.13
+      }
+    },
+    "74": {
+      "street_miles": 41.03,
+      "any_miles": 0.0,
+      "low_stress_miles": 0.0,
+      "any_pct": 0.0,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "75": {
+      "street_miles": 61.8,
+      "any_miles": 2.05,
+      "low_stress_miles": 0.13,
+      "any_pct": 3.31,
+      "low_stress_pct": 0.21,
+      "by_facility": {
+        "Protected Bike Lane": 0.13,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 1.92
+      }
+    },
+    "76": {
+      "street_miles": 28.48,
+      "any_miles": 0.0,
+      "low_stress_miles": 0.0,
+      "any_pct": 0.0,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.0,
+        "Marked Shared Lane": 0.0
+      }
+    },
+    "77": {
+      "street_miles": 35.18,
+      "any_miles": 9.23,
+      "low_stress_miles": 7.95,
+      "any_pct": 26.24,
+      "low_stress_pct": 22.59,
+      "by_facility": {
+        "Protected Bike Lane": 1.01,
+        "Neighborhood Greenway": 6.94,
+        "Buffered Bike Lane": 0.16,
+        "Bike Lane": 1.09,
+        "Marked Shared Lane": 0.04
+      }
+    },
+    "8": {
+      "street_miles": 57.13,
+      "any_miles": 9.87,
+      "low_stress_miles": 2.81,
+      "any_pct": 17.28,
+      "low_stress_pct": 4.91,
+      "by_facility": {
+        "Protected Bike Lane": 2.43,
+        "Neighborhood Greenway": 0.37,
+        "Buffered Bike Lane": 3.47,
+        "Bike Lane": 3.06,
+        "Marked Shared Lane": 0.54
+      }
+    },
+    "9": {
+      "street_miles": 25.91,
+      "any_miles": 0.37,
+      "low_stress_miles": 0.0,
+      "any_pct": 1.43,
+      "low_stress_pct": 0.0,
+      "by_facility": {
+        "Protected Bike Lane": 0.0,
+        "Neighborhood Greenway": 0.0,
+        "Buffered Bike Lane": 0.0,
+        "Bike Lane": 0.07,
+        "Marked Shared Lane": 0.3
+      }
+    }
+  }
+}
