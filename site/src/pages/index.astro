@@ -1,0 +1,120 @@
+---
+import "@fontsource-variable/big-shoulders";
+import "@fontsource-variable/public-sans";
+import "maplibre-gl/dist/maplibre-gl.css";
+import "../styles/global.css";
+import coverage from "../../../data/processed/coverage.json";
+import { FACILITIES, RAMP } from "../facilities";
+
+const city = coverage.citywide;
+const miles = city.by_facility as Record<string, number>;
+const fmt = (n: number, digits = 0) =>
+  n.toLocaleString("en-US", { minimumFractionDigits: digits, maximumFractionDigits: digits });
+const share = (n: number) => `${(100 * n) / city.street_miles}%`;
+const generated = new Date(`${coverage.generated}T12:00:00Z`).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chicago bike network coverage</title>
+    <meta
+      name="description"
+      content={`${fmt(city.any_pct, 1)}% of Chicago streets have a bike facility. Explore coverage by street, ward and community area.`}
+    />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel" aria-label="Coverage summary">
+        <header class="masthead">
+          <svg class="stars" viewBox="0 0 92 20" aria-hidden="true">
+            {[0, 1, 2, 3].map((i) => (
+              <path
+                transform={`translate(${10 + i * 24} 10)`}
+                d="M0-10 2.6-4.5 8.7-5 5.2 0 8.7 5 2.6 4.5 0 10-2.6 4.5-8.7 5-5.2 0-8.7-5-2.6-4.5Z"
+              />
+            ))}
+          </svg>
+          <h1>Chicago bike network</h1>
+        </header>
+
+        <fieldset class="segmented" id="measure">
+          <legend>Count</legend>
+          <label><input type="radio" name="measure" value="any" checked /><span>Any bike facility</span></label>
+          <label><input type="radio" name="measure" value="low_stress" /><span>Protected and greenways</span></label>
+        </fieldset>
+
+        <p class="headline" data-measure="any">
+          <strong>{fmt(city.any_pct, 1)}%</strong>
+          of Chicago's {fmt(city.street_miles)} street miles have a bike facility of any kind.
+        </p>
+        <p class="headline" data-measure="low_stress" hidden>
+          <strong>{fmt(city.low_stress_pct, 1)}%</strong>
+          of Chicago's {fmt(city.street_miles)} street miles have a protected lane or a neighborhood greenway.
+        </p>
+
+        <div class="strip" role="img" aria-label="Share of street miles by facility type; the rest have none">
+          {FACILITIES.map((f) => (
+            <span
+              class:list={{ seg: true, "not-low": !f.lowStress }}
+              style={`width:${share(miles[f.name])};background:${f.color}`}
+            />
+          ))}
+        </div>
+        <p class="strip-note">The whole bar is every street in the city. Grey has no bike facility.</p>
+
+        <table class="facilities">
+          <caption class="visually-hidden">Street miles by facility type</caption>
+          <tbody>
+            {FACILITIES.map((f) => (
+              <tr class:list={{ "not-low": !f.lowStress }}>
+                <th scope="row"><i class="swatch" style={`background:${f.color}`} />{f.label}</th>
+                <td>{fmt(miles[f.name])} mi</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <fieldset class="segmented" id="view">
+          <legend>Colour the map by</legend>
+          <label><input type="radio" name="view" value="streets" checked /><span>Facility type</span></label>
+          <label><input type="radio" name="view" value="areas" /><span>Area coverage</span></label>
+        </fieldset>
+
+        <div class="ramp" id="ramp" hidden>
+          <div class="ramp-swatches">{RAMP.map((c) => <span style={`background:${c}`} />)}</div>
+          <div class="ramp-labels" id="ramp-labels"></div>
+        </div>
+
+        <fieldset class="segmented" id="kind">
+          <legend>Rank</legend>
+          <label><input type="radio" name="kind" value="wards" checked /><span>Wards</span></label>
+          <label><input type="radio" name="kind" value="community_areas" /><span>Community areas</span></label>
+        </fieldset>
+
+        <ol class="ranking" id="ranking" aria-live="polite"></ol>
+
+        <footer class="sources">
+          <p>
+            Bike routes and street centerlines from the
+            <a href="https://data.cityofchicago.org/d/hvv9-38ut">City of Chicago Data Portal</a>.
+            Routes last updated December 2025; the street grid dates from 2021.
+            Off-street trails such as the Lakefront Trail are not counted.
+          </p>
+          <p>Calculated {generated}.</p>
+        </footer>
+      </section>
+
+      <div class="map" id="map" role="application" aria-label="Map of Chicago streets by bike facility"></div>
+    </main>
+    <script>
+      import "../scripts/map";
+    </script>
+  </body>
+</html>

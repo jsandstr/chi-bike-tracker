@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A public website tracking Chicago bike infrastructure: a street coverage map, a policy/legislation tracker, and planned construction projects. The approved plan, including phases and methodology, is at `~/.claude/plans/i-want-to-create-sequential-hennessy.md`.
 
-**Current state:** early. Only the Python pipeline exists, and only its coverage stage (download, match, aggregate) with tests. There is no site, no map tiles, no policy or project ingestion, and no CI workflows yet. Sections below marked *(planned)* describe intended design, not existing code.
+**Current state:** early. The pipeline's coverage stage (download, match, aggregate, tiles) and a single-page Astro site with the coverage map exist. There is no policy or project ingestion, no other site pages, and no CI or deploy workflow yet. Sections below marked *(planned)* describe intended design, not existing code.
 
 ## Commands
 
@@ -21,6 +21,22 @@ uv run pipeline coverage                  # rebuild data/processed + data/build 
 uv run ruff check . && uv run ruff format .
 ```
 
+`pipeline tiles` needs `tippecanoe` on the PATH (`brew install tippecanoe`) and writes `site/public/tiles/streets.pmtiles`, which is committed. Run it after `pipeline coverage`:
+
+```bash
+uv run pipeline tiles
+```
+
+Site commands run from `site/`:
+
+```bash
+npm install
+npm run dev        # http://localhost:4321/chi-bike-tracker/ (the base path is required)
+npm run build      # astro check (type-check) then build to dist/
+```
+
+`astro dev` runs detached; stop it with `npx astro dev stop`. After changing `astro.config.mjs`, stop it and delete `site/node_modules/.vite` or the browser gets "Outdated Optimize Dep" 504s.
+
 uv prints a harmless `Failed to patch the install name of the dynamic library` warning on every run.
 
 ## Architecture
@@ -29,7 +45,7 @@ uv prints a harmless `Failed to patch the install name of the dynamic library` w
 Scheduled GitHub Actions (planned)
   ├─ pipeline/ (Python)  →  data/processed/*.json, PMTiles
   └─ opens a PR with data changes  →  human review/merge  →  deploy
-site/ (planned: Astro + MapLibre + PMTiles, static, GitHub Pages)
+site/ (Astro + MapLibre + PMTiles, static; GitHub Pages deploy planned)
 ```
 
 The site is static with no server or database. The pipeline writes generated data into the repo, and **the pull request is the review queue**: scraped or AI-summarised content must not be published without passing through a reviewed PR.
@@ -53,6 +69,15 @@ The site is static with no server or database. The pipeline writes generated dat
 - The centerline file extends past the city limits. `cli.coverage` drops segments whose midpoint is in no ward, so ward totals sum exactly to the citywide total. Community areas sum about 9 miles short of it; that gap is not yet explained.
 - Segments are assigned to an area by midpoint, so a boundary street counts toward one side only.
 - Off-street trails are not in the Bike Routes dataset and are not counted.
+
+### Site
+
+`site/src/pages/index.astro` renders the summary panel at build time from `data/processed/coverage.json`; `site/src/scripts/map.ts` owns the map and everything that reacts to the three controls (measure, map colouring, ward/community ranking). The ward and community GeoJSON are imported with `?url` and fetched in the browser.
+
+- `site/src/facilities.ts` is the single place for facility names, colours and choropleth breaks. Names must match `FACILITY_RANK` in the pipeline. The five line colours were validated together for colour-blind separation; do not change one in isolation.
+- MapLibre 6 has no default export and cannot locate its worker after bundling, hence `import * as maplibregl`, the `?worker&url` import with `setWorkerUrl`, and `worker.format: "es"` in the Astro config.
+- Tiles carry only `name` and `facility` per street. Each feature gets a tippecanoe `minzoom` (bikeways 8, arterials 9, collectors 11, local 12) in `cli._write_tile_input`.
+- The basemap is OpenFreeMap's hosted Positron style; the page is light-mode only.
 
 ### Data sources
 
