@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A public website tracking Chicago bike infrastructure: a street coverage map, a policy/legislation tracker, and planned construction projects. The approved plan, including phases and methodology, is at `~/.claude/plans/i-want-to-create-sequential-hennessy.md`.
 
-**Current state:** early. The pipeline's coverage stage (download, match, aggregate, tiles) and a single-page Astro site with the coverage map exist. There is no policy or project ingestion, no other site pages, and no CI or deploy workflow yet. Sections below marked *(planned)* describe intended design, not existing code.
+**Current state:** early. The pipeline's coverage stage (download, match, aggregate, tiles), a history stage (snapshots, policies) and and a two-page Astro site (coverage map, policies with a timelapse) exist. `.github/workflows/deploy.yml` deploys the site to GitHub Pages on pushes to main. There is no policy or project ingestion and no scheduled data workflow yet. Sections below marked *(planned)* describe intended design, not existing code.
 
 ## Commands
 
@@ -18,10 +18,11 @@ uv sync                                   # install dependencies
 uv run pytest                             # all tests
 uv run pytest tests/test_coverage.py::test_best_facility_wins   # single test
 uv run pipeline coverage                  # rebuild data/processed + data/build (add --refresh to re-download)
+uv run pipeline history                   # rebuild history.json, policies.json and data/build/history.geojson
 uv run ruff check . && uv run ruff format .
 ```
 
-`pipeline tiles` needs `tippecanoe` on the PATH (`brew install tippecanoe`) and writes `site/public/tiles/streets.pmtiles`, which is committed. Run it after `pipeline coverage`:
+`pipeline tiles` needs `tippecanoe` on the PATH (`brew install tippecanoe`) and writes `site/public/tiles/streets.pmtiles` and `history.pmtiles` (the latter once `pipeline history` has run), which are committed. Run it after `pipeline coverage` and `pipeline history`:
 
 ```bash
 uv run pipeline tiles
@@ -53,10 +54,10 @@ The site is static with no server or database. The pipeline writes generated dat
 ### Data directories
 
 - `data/raw/` — downloaded source datasets, git-ignored, cached. `socrata.load()` only re-downloads when `refresh=True` or the file is missing. The centerlines file is about 81 MB.
-- `data/processed/` — generated outputs the site reads (`coverage.json`, ward and community area GeoJSON with stats). Committed.
-- `data/build/` — git-ignored intermediates, currently `streets.geojson` (20 MB), the input for tippecanoe.
+- `data/processed/` — generated outputs the site reads (`coverage.json`, ward and community area GeoJSON with stats, `history.json`, `policies.json`). Committed.
+- `data/build/` — git-ignored intermediates, `streets.geojson` (20 MB) and `history.geojson`, the inputs for tippecanoe.
 - `data/queue/` — generated project candidates awaiting human approval *(planned)*.
-- `data/curated/` — hand-maintained records and overrides; the source of truth for projects. Never overwrite from the pipeline.
+- `data/curated/` — hand-maintained records and overrides; the source of truth for projects and for policies (`policies/*.yaml`, validated by `pipeline/history/policies.py`, unknown fields rejected). Never overwrite from the pipeline.
 
 ### Coverage calculation
 
@@ -78,6 +79,16 @@ The site is static with no server or database. The pipeline writes generated dat
 - MapLibre 6 has no default export and cannot locate its worker after bundling, hence `import * as maplibregl`, the `?worker&url` import with `setWorkerUrl`, and `worker.format: "es"` in the Astro config.
 - Tiles carry only `name` and `facility` per street. Each feature gets a tippecanoe `minzoom` (bikeways 8, arterials 9, collectors 11, local 12) in `cli._write_tile_input`.
 - The basemap is OpenFreeMap's hosted Positron style; the page is light-mode only.
+- `site/src/layouts/Base.astro` holds the head, fonts and global CSS; `components/Masthead.astro` is the four-star masthead plus the nav (`current` marks the page, links use `BASE_URL`). `scripts/basemap.ts` is the shared MapLibre setup (worker URL, pmtiles protocol, `createMap`, `tileUrl`); `facilities.ts` also holds `facilityStops` (map colours per measure) and the Chicago bounds. `format.ts` has number and `YYYY-MM` helpers, and `data.ts` types and imports `history.json` and `policies.json`.
+- `site/src/pages/policies.astro` is a normal scrolling page: timelapse, current and past policy rows, a coverage-contribution comparison, and method notes. The chart is plain HTML and CSS rendered at build time with percentage positions (so text stays full size on phones), both measures drawn and one shown by CSS on `[data-measure]`. X positions come from `timeScale` (calendar months), never the snapshot index. `scripts/timelapse.ts` owns the map frame (`has s<i>` filter, colours from `s<i>`), the measure toggle, play/pause (hidden under `prefers-reduced-motion`), and the slider, which snaps to the nearest snapshot. It still runs the chart if WebGL is unavailable. Styles are in `styles/policies.css`.
+
+### History and policies
+
+`pipeline history` matches archived Bike Routes snapshots (2014-12 to 2025-12, IDs in `history/snapshots.py` and `sources/README.md`) with the same `match_facilities` against the same ward-filtered centerlines, so every snapshot shares one denominator and the 2025-12 snapshot equals `coverage.json`. Each snapshot's labels are normalised to the five canonical facility names; an unknown label raises, so a new snapshot format fails loudly. Old snapshots have no `st_name`, so the matcher's whole-word fallback on `street` does the name check. Recovery is 94 to 100% of the snapshot's own route length; what is missed is mostly renamed streets.
+
+`history.json` holds miles and percentages per snapshot. `history.pmtiles` (layer `history`) has every segment that had a facility in any snapshot, with `s0`..`s7` giving its facility at each snapshot.
+
+A policy's contribution in `policies.json` is attributed by time window: from the latest snapshot at or before its start to the earliest at or after its end (the last snapshot if it is ongoing). This is an approximation, since everything built in the window is credited to the policy, whatever its cause, and snapshot dates are only as precise as the portal's publish dates. `truncated` marks policies that start before the first snapshot. Facility relabelling by the city also shows up as change.
 
 ### Data sources
 

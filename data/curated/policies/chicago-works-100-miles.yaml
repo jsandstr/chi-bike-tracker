@@ -1,0 +1,25 @@
+id: chicago-works-100-miles
+name: Chicago Works 100-mile bikeway expansion
+kind: program
+jurisdiction: City of Chicago
+status: completed
+start: "2021-01"
+end: "2022-12"
+summary: >
+  Announced in September 2021 as the largest two-year expansion of the bike
+  network in the city's history: $17 million from the Chicago Works capital
+  plan for 100 miles of new and upgraded bike lanes, 50 miles in 2021 and 50
+  in 2022.
+measure: true
+targets:
+  - label: 100 miles of new and upgraded bike lanes
+    metric: any_miles_added
+    value: 100
+    note: >
+      Upgrading an existing lane (for example painted to protected) counted
+      toward the city's 100 miles but adds no new street miles here.
+sources:
+  - title: Chicago DOT announces largest bike-lane expansion in city's history (Roads & Bridges)
+    url: https://www.roadsbridges.com/transportation-management/news/10654329/chicago-dot-announces-largest-bike-lane-expansion-in-citys-history
+  - title: CDOT announces major bikeway push (Streetsblog Chicago)
+    url: https://chi.streetsblog.org/2021/09/22/cdot-announces-major-bikeway-push-still-no-plans-for-a-cohesive-protected-network/

@@ -1,0 +1,20 @@
+id: 25-mph-speed-limit
+name: 25 mph default speed limit
+kind: ordinance
+jurisdiction: City of Chicago
+status: failed
+start: "2024-10"
+end: "2025-02"
+summary: >
+  A proposal to lower Chicago's default speed limit from 30 to 25 mph. It
+  passed the Committee on Pedestrian and Traffic Safety in October 2024, but
+  the full City Council rejected it 21-28 on February 19, 2025, with
+  opponents citing the burden of fines on Black, Latino and low-income
+  residents.
+measure: false
+targets: []
+sources:
+  - title: City Council votes 21-28 to reject push to lower Chicago's default speed limit to 25 mph (WTTW)
+    url: https://news.wttw.com/2025/02/19/city-council-votes-21-28-reject-push-lower-chicago-s-default-speed-limit-25-mph
+  - title: 25 mph speed limit passes in committee (Streetsblog Chicago)
+    url: https://chi.streetsblog.org/2024/10/21/five-nickels-on-the-dime-25-mph-speed-limit-for-safer-streets-passes-in-committee-will-get-final-council-vote-later-this-year

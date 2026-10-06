@@ -1,0 +1,22 @@
+id: vision-zero-chicago
+name: Vision Zero Chicago Action Plan
+kind: plan
+jurisdiction: City of Chicago
+status: active
+start: "2017-06"
+end: "2026-12"
+summary: >
+  Released in June 2017, the plan commits the city to eliminating deaths and
+  serious injuries from traffic crashes by 2026, with interim goals of 20%
+  fewer deaths and 35% fewer serious injuries by 2020. It is a safety plan
+  rather than a bikeway plan, so no coverage contribution is calculated.
+measure: false
+targets:
+  - label: Zero traffic deaths and serious injuries by 2026
+    metric: none
+    value: null
+sources:
+  - title: Vision Zero Chicago Action Plan (City of Chicago, 2017)
+    url: https://chicago.gov/content/dam/city/sites/complete-streets/pdfs/17_0612%20VZ%20Action%20Plan_FOR%20WEB.pdf
+  - title: Mayor's press release, June 12, 2017
+    url: https://chicago.gov/city/en/depts/mayor/press_room/press_releases/2017/june/VisionZero.html

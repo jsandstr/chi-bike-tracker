@@ -1,0 +1,20 @@
+id: smart-streets-pilot
+name: Smart Streets camera enforcement pilot
+kind: ordinance
+jurisdiction: City of Chicago
+status: active
+start: "2023-03"
+end: "2026-12"
+summary: >
+  A two-year pilot, authorised by City Council in March 2023, that uses
+  cameras (including ones mounted on CTA buses) to ticket drivers who park in
+  bike lanes and bus lanes downtown, in the area from Lake Michigan to Ashland
+  Avenue and North Avenue to Roosevelt Road. The pilot is set to expire in
+  December 2026.
+measure: false
+targets: []
+sources:
+  - title: Chicago drivers caught on camera blocking bike lanes will soon get tickets in the mail (Block Club Chicago)
+    url: https://blockclubchicago.org/2023/03/15/chicago-drivers-caught-on-camera-blocking-bike-lanes-will-soon-get-tickets-in-the-mail/
+  - title: Chicago begins automated ticketing of drivers who block bike and bus lanes downtown (CBS Chicago)
+    url: https://www.cbsnews.com/amp/chicago/news/chicago-bike-bus-lane-ticketing-downtown-smart-streets-program

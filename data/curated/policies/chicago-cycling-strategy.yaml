@@ -1,0 +1,35 @@
+id: chicago-cycling-strategy
+name: Chicago Cycling Strategy
+kind: plan
+jurisdiction: City of Chicago
+status: active
+start: "2023-03"
+end: null
+summary: >
+  CDOT's current bike plan, released in March 2023. It sets out the next 150
+  miles of bikeways and shifts the emphasis to a connected, low-stress network:
+  85% of the identified projects are protected bike lanes or neighborhood
+  greenways. It is funded through the Chicago Works capital plan.
+measure: true
+targets:
+  - label: 150 miles of new bikeways
+    metric: any_miles_added
+    value: 150
+    reported:
+      value: 50
+      as_of: "2024-01"
+      source: https://blockclubchicago.org/2024/01/11/city-installed-50-miles-of-bike-friendly-stretches-in-2023-and-has-more-planned-for-2024/
+    note: >
+      The city's count includes upgrades to existing lanes and off-street
+      trails. The measured figure is net new street miles with any facility,
+      so it runs lower.
+  - label: 70% of Chicagoans within half a mile of a low-stress bikeway
+    metric: none
+    value: null
+sources:
+  - title: Chicago Cycling Strategy, executive summary (CDOT, 2023)
+    url: https://www.chicago.gov/content/dam/city/sites/complete-streets/pdfs/2023_Chicago%20Cycling%20Strategy_Executive%20Summary.pdf
+  - title: CDOT releases vision for adding 150 miles of bike lanes across city (WBEZ)
+    url: https://www.wbez.org/2023/03/30/cdot-releases-vision-for-adding-150-miles-of-bike-lanes-across-city
+  - title: Complete Streets 2024 highlights (CDOT)
+    url: https://chicago.gov/city/en/sites/complete-streets-chicago/home/featured-projects-and-innovations/CompleteStreets2024Highlights.html

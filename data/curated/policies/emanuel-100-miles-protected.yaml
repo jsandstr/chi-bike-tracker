@@ -1,0 +1,30 @@
+id: emanuel-100-miles-protected
+name: 100 miles of protected bike lanes
+kind: pledge
+jurisdiction: City of Chicago
+status: completed
+start: "2011-05"
+end: "2015-10"
+summary: >
+  Mayor Emanuel's 2011 transition plan promised 100 miles of physically
+  separated bike lanes in his first term. In October 2015 the city announced
+  it had reached 103 miles, but by then it was counting buffered lanes
+  ("buffer-protected") toward the goal; only about 20 of those miles had a
+  physical barrier.
+measure: true
+targets:
+  - label: 100 miles of protected bike lanes
+    metric: protected_miles_total
+    value: 100
+    reported:
+      value: 103
+      as_of: "2015-10"
+      source: https://chicago.gov/city/en/depts/mayor/press_room/press_releases/2015/september/city-of-chicago-surpasses-mayor-emanuels-goal-of-installing-100-.html
+    note: >
+      The city's 103 miles includes buffered bike lanes. The measured figure
+      counts only lanes the city's data labels as protected.
+sources:
+  - title: City of Chicago surpasses Mayor Emanuel's goal of installing 100 miles of protected bike lanes (City of Chicago)
+    url: https://chicago.gov/city/en/depts/mayor/press_room/press_releases/2015/september/city-of-chicago-surpasses-mayor-emanuels-goal-of-installing-100-.html
+  - title: CDOT didn't hit 100-mile PBL goal, but they did transform the bike network (Streetsblog Chicago)
+    url: https://chi.streetsblog.org/2015/10/09/cdot-didnt-hit-100-mile-pbl-goal-but-they-did-transform-the-bike-network

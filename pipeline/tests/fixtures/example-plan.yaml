@@ -1,0 +1,23 @@
+id: example-plan
+name: Example Plan
+kind: plan
+jurisdiction: City of Chicago
+status: active
+start: 2023-03
+end: null
+summary: >
+  A fixture used by the tests.
+measure: true
+targets:
+  - label: 50 miles of new bikeways
+    metric: any_miles_added
+    value: 50
+    reported:
+      value: 20
+      as_of: 2024-01
+      source: https://example.org/report
+  - label: A promise with no number
+    metric: none
+sources:
+  - title: Announcement
+    url: https://example.org/plan

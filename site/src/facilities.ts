@@ -16,3 +16,10 @@ export const BREAKS: Record<Measure, number[]> = {
   any: [5, 10, 15, 20],
   low_stress: [2, 5, 8, 12],
 };
+
+export const MUTED_FACILITY = "#9aa4b2";
+export const CHICAGO: [number, number, number, number] = [-87.94, 41.644, -87.524, 42.023];
+
+// Flat [name, colour, ...] pairs for a MapLibre "match"; non-low-stress facilities fade under the low-stress measure.
+export const facilityStops = (measure: Measure) =>
+  FACILITIES.flatMap((f) => [f.name, measure === "low_stress" && !f.lowStress ? MUTED_FACILITY : f.color]);
