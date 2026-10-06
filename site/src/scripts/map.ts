@@ -15,7 +15,8 @@ type Areas = FeatureCollection<GeoJSON.Geometry, AreaProps>;
 const NO_FACILITY = "#cbd2db";
 const MUTED_FACILITY = "#9aa4b2";
 const INK = "#14213a";
-const SELECTED = "#e4002b";
+const SELECTED = "#2563eb";
+const AREA_BORDER = "#d98a3d";
 const CHICAGO: [number, number, number, number] = [-87.94, 41.644, -87.524, 42.023];
 
 const state = { measure: "any" as Measure, kind: "wards" as Kind, view: "streets" as View };
@@ -147,6 +148,10 @@ async function apply() {
   map.setLayoutProperty("bikeways-casing", "visibility", receded ? "none" : "visible");
   map.setPaintProperty("area-fill", "fill-color", areaFill());
   map.setLayoutProperty("area-fill", "visibility", state.view === "areas" ? "visible" : "none");
+  // A warm outline separates neighbouring areas of the same blue class.
+  map.setPaintProperty("area-outline", "line-color", receded ? AREA_BORDER : INK);
+  map.setPaintProperty("area-outline", "line-width", receded ? 1 : 0.6);
+  map.setPaintProperty("area-outline", "line-opacity", receded ? 0.6 : 0.35);
 }
 
 async function setKind() {
@@ -172,6 +177,7 @@ map.on("load", async () => {
   map.addSource("areas", { type: "geojson", data: await areas[state.kind], promoteId: "id" });
 
   const isBikeway: ExpressionSpecification = ["has", "facility"];
+  const isSelected: ExpressionSpecification = ["boolean", ["feature-state", "selected"], false];
 
   map.addLayer({
     id: "area-fill",
@@ -179,6 +185,13 @@ map.on("load", async () => {
     source: "areas",
     layout: { visibility: "none" },
     paint: { "fill-color": areaFill(), "fill-opacity": 0.82 },
+  });
+  // Always present, so an area can be clicked in either view; only the selected one is tinted.
+  map.addLayer({
+    id: "area-selected",
+    type: "fill",
+    source: "areas",
+    paint: { "fill-color": SELECTED, "fill-opacity": ["case", isSelected, 0.2, 0] },
   });
   map.addLayer({
     id: "streets-plain",
@@ -193,11 +206,7 @@ map.on("load", async () => {
     id: "area-outline",
     type: "line",
     source: "areas",
-    paint: {
-      "line-color": ["case", ["boolean", ["feature-state", "selected"], false], SELECTED, INK],
-      "line-width": ["case", ["boolean", ["feature-state", "selected"], false], 2.5, 0.6],
-      "line-opacity": ["case", ["boolean", ["feature-state", "selected"], false], 1, 0.35],
-    },
+    paint: { "line-color": INK, "line-width": 0.6, "line-opacity": 0.35 },
   });
   map.addLayer({
     id: "bikeways-casing",
@@ -243,7 +252,7 @@ map.on("load", async () => {
     else popup.remove();
   });
   map.on("mouseout", () => popup.remove());
-  map.on("click", "area-fill", (event) => {
+  map.on("click", "area-selected", (event) => {
     const id = event.features?.[0]?.properties.id;
     if (id) {
       select(String(id));
